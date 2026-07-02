@@ -77,14 +77,19 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
     meta: [
       { charSet: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
-      { title: "Lovable App" },
-      { name: "description", content: "Lovable Generated Project" },
-      { name: "author", content: "Lovable" },
-      { property: "og:title", content: "Lovable App" },
-      { property: "og:description", content: "Lovable Generated Project" },
+      { title: "Elin Vaher — Independent Designer" },
+      {
+        name: "description",
+        content:
+          "Portfolio of Elin Vaher — independent designer working in identity, editorial, and art direction.",
+      },
+      { property: "og:title", content: "Elin Vaher — Independent Designer" },
+      {
+        property: "og:description",
+        content: "Selected works in identity, editorial, and art direction.",
+      },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },
-      { name: "twitter:site", content: "@Lovable" },
     ],
     links: [
       {
