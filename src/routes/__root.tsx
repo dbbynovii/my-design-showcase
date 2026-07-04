@@ -77,19 +77,25 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
     meta: [
       { charSet: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
-      { title: "Elin Vaher — Independent Designer" },
+      { title: "Elin Vaher — Independent Designer, Issue N°014" },
       {
         name: "description",
         content:
           "Portfolio of Elin Vaher — independent designer working in identity, editorial, and art direction.",
       },
-      { property: "og:title", content: "Elin Vaher — Independent Designer" },
+      { property: "og:title", content: "Elin Vaher — Independent Designer, Issue N°014" },
       {
         property: "og:description",
         content: "Selected works in identity, editorial, and art direction.",
       },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },
+      { name: "twitter:title", content: "Elin Vaher — Independent Designer, Issue N°014" },
+      { name: "description", content: "Portfolio of Elin Vaher — independent designer working in identity, editorial, and art direction. Selected works 2019–2026." },
+      { property: "og:description", content: "Portfolio of Elin Vaher — independent designer working in identity, editorial, and art direction. Selected works 2019–2026." },
+      { name: "twitter:description", content: "Portfolio of Elin Vaher — independent designer working in identity, editorial, and art direction. Selected works 2019–2026." },
+      { property: "og:image", content: "https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/63afd7b2-b2e6-4408-97ac-1d42b1cee9de/id-preview-f6d28566--ff7f55e6-9f89-455b-b1ff-780e4d617923.lovable.app-1783000529549.png" },
+      { name: "twitter:image", content: "https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/63afd7b2-b2e6-4408-97ac-1d42b1cee9de/id-preview-f6d28566--ff7f55e6-9f89-455b-b1ff-780e4d617923.lovable.app-1783000529549.png" },
     ],
     links: [
       {
