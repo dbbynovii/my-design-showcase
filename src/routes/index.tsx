@@ -1,6 +1,10 @@
 import { createFileRoute } from "@tanstack/react-router";
+import { useEffect, useState } from "react";
+import useEmblaCarousel from "embla-carousel-react";
 import portrait from "@/assets/portrait.jpg";
 import bannerAsset from "@/assets/banner.png.asset.json";
+import kidsAsset from "@/assets/kids.png.asset.json";
+import gkAsset from "@/assets/gk.png.asset.json";
 import work01 from "@/assets/work-01.jpg";
 import work02 from "@/assets/work-02.jpg";
 import work03 from "@/assets/work-03.jpg";
@@ -87,15 +91,52 @@ function Index() {
 }
 
 function Banner() {
+  const slides = [
+    { src: bannerAsset.url, alt: "Koentji — Penjualan Makin Cuan, GrabMerchant" },
+    { src: kidsAsset.url, alt: "Little Wear by Little Palmerhaus" },
+    { src: gkAsset.url, alt: "Guru Kreator — Instagram posts" },
+  ];
+  const [emblaRef, emblaApi] = useEmblaCarousel({ loop: true });
+  const [selected, setSelected] = useState(0);
+
+  useEffect(() => {
+    if (!emblaApi) return;
+    const onSelect = () => setSelected(emblaApi.selectedScrollSnap());
+    onSelect();
+    emblaApi.on("select", onSelect);
+    emblaApi.on("reInit", onSelect);
+    return () => {
+      emblaApi.off("select", onSelect);
+      emblaApi.off("reInit", onSelect);
+    };
+  }, [emblaApi]);
+
   return (
     <section className="border-b border-foreground/20">
-      <div className="mx-auto max-w-[1400px] px-6 pt-8 md:px-10 md:pt-10">
-        <div className="overflow-hidden aspect-[1920/860]">
-          <img
-            src={bannerAsset.url}
-            alt="Koentji — Penjualan Makin Cuan, GrabMerchant"
-            className="h-full w-full object-cover"
-          />
+      <div className="mx-auto max-w-[1400px] px-6 pt-8 pb-6 md:px-10 md:pt-10">
+        <div className="overflow-hidden" ref={emblaRef}>
+          <div className="flex">
+            {slides.map((s, i) => (
+              <div key={i} className="relative min-w-0 shrink-0 grow-0 basis-full">
+                <div className="aspect-[1920/860] overflow-hidden">
+                  <img src={s.src} alt={s.alt} className="h-full w-full object-cover" />
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+        <div className="mt-5 flex justify-center gap-3">
+          {slides.map((_, i) => (
+            <button
+              key={i}
+              type="button"
+              aria-label={`Go to slide ${i + 1}`}
+              onClick={() => emblaApi?.scrollTo(i)}
+              className={`h-2 w-2 rounded-full transition-all ${
+                selected === i ? "bg-foreground w-6" : "bg-foreground/30 hover:bg-foreground/60"
+              }`}
+            />
+          ))}
         </div>
       </div>
     </section>
