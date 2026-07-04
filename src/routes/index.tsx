@@ -1,5 +1,6 @@
 import { createFileRoute } from "@tanstack/react-router";
 import portrait from "@/assets/portrait.jpg";
+import bannerAsset from "@/assets/banner.png.asset.json";
 import work01 from "@/assets/work-01.jpg";
 import work02 from "@/assets/work-02.jpg";
 import work03 from "@/assets/work-03.jpg";
@@ -73,6 +74,8 @@ function Index() {
   return (
     <div className="min-h-screen bg-background text-foreground">
       <Masthead />
+      <Banner />
+
       <Hero />
       <Marquee />
       <Selected />
@@ -80,6 +83,22 @@ function Index() {
       <Index_ />
       <Colophon />
     </div>
+  );
+}
+
+function Banner() {
+  return (
+    <section className="border-b border-foreground/20">
+      <div className="mx-auto max-w-[1400px] px-6 pt-8 md:px-10 md:pt-10">
+        <div className="overflow-hidden aspect-[1920/860]">
+          <img
+            src={bannerAsset.url}
+            alt="Koentji — Penjualan Makin Cuan, GrabMerchant"
+            className="h-full w-full object-cover"
+          />
+        </div>
+      </div>
+    </section>
   );
 }
 
