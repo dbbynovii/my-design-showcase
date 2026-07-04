@@ -86,6 +86,22 @@ function Index() {
   );
 }
 
+function Banner() {
+  return (
+    <section className="border-b border-foreground/20">
+      <div className="mx-auto max-w-[1400px] px-6 pt-8 md:px-10 md:pt-10">
+        <div className="overflow-hidden aspect-[1920/860]">
+          <img
+            src={bannerAsset.url}
+            alt="Koentji — Penjualan Makin Cuan, GrabMerchant"
+            className="h-full w-full object-cover"
+          />
+        </div>
+      </div>
+    </section>
+  );
+}
+
 function Masthead() {
   return (
     <header className="border-b border-foreground/20">
