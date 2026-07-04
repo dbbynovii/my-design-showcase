@@ -125,17 +125,23 @@ function Banner() {
             ))}
           </div>
         </div>
-        <div className="mt-5 flex justify-center gap-3">
+        <div className="mt-5 flex justify-center gap-2">
           {slides.map((_, i) => (
             <button
               key={i}
               type="button"
               aria-label={`Go to slide ${i + 1}`}
               onClick={() => emblaApi?.scrollTo(i)}
-              className={`h-2 w-2 rounded-full transition-all ${
-                selected === i ? "bg-foreground w-6" : "bg-foreground/30 hover:bg-foreground/60"
-              }`}
-            />
+              className="group cursor-pointer p-2"
+            >
+              <span
+                className={`block h-2 rounded-full transition-all ${
+                  selected === i
+                    ? "bg-foreground w-6"
+                    : "bg-foreground/30 w-2 group-hover:bg-foreground/60"
+                }`}
+              />
+            </button>
           ))}
         </div>
       </div>
