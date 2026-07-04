@@ -182,7 +182,7 @@ function Hero() {
         <div className="eyebrow text-foreground/60">The Cover — Portrait of a Practice</div>
 
         <h1 className="rise-in mt-8 font-serif text-[15vw] leading-[0.88] tracking-[-0.02em] md:text-[10.5rem]">
-          <span className="italic">Debora</span>
+          <span className="italic">Debora Novianti</span>
           <span className="align-top text-3xl md:text-5xl"> ✳</span>
         </h1>
 
@@ -192,20 +192,6 @@ function Hero() {
             <em> identities</em>, editorial design, marketing materials
             that combine aesthetics with strategic communication.
           </p>
-          <div className="col-span-1 md:col-span-4 md:col-start-9">
-            <div className="rule mb-4" />
-            <dl className="grid grid-cols-2 gap-y-3 text-sm">
-              <dt className="text-foreground/60">Practice since</dt>
-              <dd>2016</dd>
-              <dt className="text-foreground/60">Available</dt>
-              <dd>Q3 — 2026</dd>
-              <dt className="text-foreground/60">Currently</dt>
-              <dd>Two projects in press</dd>
-              <dt className="text-foreground/60">Recognition</dt>
-              <dd>TDC · D&AD · Brand New</dd>
-            </dl>
-            <div className="rule mt-4" />
-          </div>
         </div>
       </div>
     </section>
