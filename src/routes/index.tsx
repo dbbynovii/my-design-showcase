@@ -182,17 +182,15 @@ function Hero() {
         <div className="eyebrow text-foreground/60">The Cover — Portrait of a Practice</div>
 
         <h1 className="rise-in mt-8 font-serif text-[15vw] leading-[0.88] tracking-[-0.02em] md:text-[10.5rem]">
-          Elin
-          <br />
-          <span className="italic">Vaher</span>
+          <span className="italic">Debora</span>
           <span className="align-top text-3xl md:text-5xl"> ✳</span>
         </h1>
 
         <div className="mt-10 grid grid-cols-1 gap-10 md:grid-cols-12">
           <p className="serif col-span-1 text-2xl leading-[1.15] md:col-span-7 md:text-4xl">
-            An independent designer building quiet, considered
-            <em> identities</em>, editorial systems, and art direction for
-            studios, publishers, and small institutions.
+            An independent graphic designer crafting visual
+            <em> identities</em>, editorial design, marketing materials
+            that combine aesthetics with strategic communication.
           </p>
           <div className="col-span-1 md:col-span-4 md:col-start-9">
             <div className="rule mb-4" />
