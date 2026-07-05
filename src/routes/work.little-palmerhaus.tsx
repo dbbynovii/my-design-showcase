@@ -85,71 +85,17 @@ function LittlePalmerhaus() {
       <section className="border-b border-foreground/20">
         <div className="mx-auto max-w-[1400px] px-6 py-16 md:px-10 md:py-24">
           <div className="eyebrow text-foreground/60">Selected Designs</div>
-
-          <div className="mt-10 grid grid-cols-12 gap-4 md:gap-6">
-            {/* Row 1: two side-by-side */}
-            <figure className="col-span-12 overflow-hidden md:col-span-7">
-              <img
-                src={gallery[0].url}
-                alt="Little Palmerhaus campaign 1"
-                loading="lazy"
-                className="h-full w-full object-cover"
-              />
-            </figure>
-            <figure className="col-span-12 overflow-hidden md:col-span-5">
-              <img
-                src={gallery[1].url}
-                alt="Little Palmerhaus campaign 2"
-                loading="lazy"
-                className="h-full w-full object-cover"
-              />
-            </figure>
-
-            {/* Row 2: single wide accent */}
-            <figure className="col-span-12 overflow-hidden">
-              <img
-                src={gallery[2].url}
-                alt="Little Palmerhaus campaign 3"
-                loading="lazy"
-                className="max-h-[70vh] w-full object-cover"
-              />
-            </figure>
-
-            {/* Row 3: three across */}
-            <figure className="col-span-12 overflow-hidden md:col-span-4">
-              <img
-                src={gallery[3].url}
-                alt="Little Palmerhaus campaign 4"
-                loading="lazy"
-                className="h-full w-full object-cover"
-              />
-            </figure>
-            <figure className="col-span-12 overflow-hidden md:col-span-4">
-              <img
-                src={gallery[4].url}
-                alt="Little Palmerhaus campaign 5"
-                loading="lazy"
-                className="h-full w-full object-cover"
-              />
-            </figure>
-            <figure className="col-span-12 overflow-hidden md:col-span-4">
-              <img
-                src={gallery[5].url}
-                alt="Little Palmerhaus campaign 6"
-                loading="lazy"
-                className="h-full w-full object-cover"
-              />
-            </figure>
-
-            {/* Row 4: offset closer */}
-            <figure className="col-span-12 overflow-hidden md:col-span-8 md:col-start-3">
-              <img
-                src={gallery[6].url}
-                alt="Little Palmerhaus campaign 7"
-                loading="lazy"
-                className="h-full w-full object-cover"
-              />
-            </figure>
+          <div className="mt-10 space-y-10">
+            {gallery.map((g, i) => (
+              <figure key={i} className="overflow-hidden">
+                <img
+                  src={g.url}
+                  alt={`Little Palmerhaus campaign ${i + 1}`}
+                  loading="lazy"
+                  className="h-auto w-full object-cover"
+                />
+              </figure>
+            ))}
           </div>
         </div>
       </section>
