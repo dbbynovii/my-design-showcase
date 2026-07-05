@@ -1,4 +1,7 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
+import { useEffect, useState } from "react";
+import useEmblaCarousel from "embla-carousel-react";
+import Autoplay from "embla-carousel-autoplay";
 import mainAsset from "@/assets/lp-main.png.asset.json";
 import lp1 from "@/assets/lp-1.png.asset.json";
 import lp2 from "@/assets/lp-2.png.asset.json";
@@ -35,6 +38,22 @@ export const Route = createFileRoute("/work/little-palmerhaus")({
 
 function LittlePalmerhaus() {
   const gallery = [lp1, lp2, lp3, lp4, lp5, lp6, lp7];
+  const [emblaRef, emblaApi] = useEmblaCarousel({ loop: true }, [
+    Autoplay({ delay: 4000, stopOnInteraction: false, stopOnMouseEnter: true }),
+  ]);
+  const [selected, setSelected] = useState(0);
+
+  useEffect(() => {
+    if (!emblaApi) return;
+    const onSelect = () => setSelected(emblaApi.selectedScrollSnap());
+    onSelect();
+    emblaApi.on("select", onSelect);
+    emblaApi.on("reInit", onSelect);
+    return () => {
+      emblaApi.off("select", onSelect);
+      emblaApi.off("reInit", onSelect);
+    };
+  }, [emblaApi]);
 
   return (
     <div className="min-h-screen bg-background text-foreground">
@@ -85,16 +104,37 @@ function LittlePalmerhaus() {
       <section className="border-b border-foreground/20">
         <div className="mx-auto max-w-[1400px] px-6 py-16 md:px-10 md:py-24">
           <div className="eyebrow text-foreground/60">Selected Designs</div>
-          <div className="mt-10 space-y-10">
-            {gallery.map((g, i) => (
-              <figure key={i} className="overflow-hidden">
-                <img
-                  src={g.url}
-                  alt={`Little Palmerhaus campaign ${i + 1}`}
-                  loading="lazy"
-                  className="h-auto w-full object-cover"
+          <div className="mt-10 overflow-hidden" ref={emblaRef}>
+            <div className="flex">
+              {gallery.map((g, i) => (
+                <div key={i} className="relative min-w-0 shrink-0 grow-0 basis-full">
+                  <img
+                    src={g.url}
+                    alt={`Little Palmerhaus campaign ${i + 1}`}
+                    loading={i === 0 ? "eager" : "lazy"}
+                    className="h-auto w-full object-cover"
+                  />
+                </div>
+              ))}
+            </div>
+          </div>
+          <div className="mt-6 flex justify-center gap-2">
+            {gallery.map((_, i) => (
+              <button
+                key={i}
+                type="button"
+                aria-label={`Go to slide ${i + 1}`}
+                onClick={() => emblaApi?.scrollTo(i)}
+                className="group cursor-pointer p-2"
+              >
+                <span
+                  className={`block h-2 rounded-full transition-all ${
+                    selected === i
+                      ? "bg-foreground w-6"
+                      : "bg-foreground/30 w-2 group-hover:bg-foreground/60"
+                  }`}
                 />
-              </figure>
+              </button>
             ))}
           </div>
         </div>
