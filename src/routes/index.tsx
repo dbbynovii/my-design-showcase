@@ -1,7 +1,7 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { useEffect, useState } from "react";
 import useEmblaCarousel from "embla-carousel-react";
-import portrait from "@/assets/portrait.jpg";
+import portraitAsset from "@/assets/photo_profil.png.asset.json";
 import bannerAsset from "@/assets/banner.png.asset.json";
 import kidsAsset from "@/assets/kids.png.asset.json";
 import gkAsset from "@/assets/gk.png.asset.json";
@@ -134,45 +134,35 @@ function Hero() {
         <div className="md:col-span-5">
           <div className="aspect-[4/5] overflow-hidden bg-muted">
             <img
-              src={portrait}
+              src={portraitAsset.url}
               alt="Portrait of Debora Novianti"
               loading="lazy"
               className="h-full w-full object-cover"
             />
           </div>
-          <p className="mt-3 font-serif italic text-foreground/60">
-            Fig. 1 — The designer in her studio, March 2026.
-          </p>
         </div>
 
         <div className="md:col-span-6 md:col-start-7">
-          <div className="eyebrow text-foreground/60">The Interview</div>
+          <div className="eyebrow text-foreground/60">About Me</div>
           <h2 className="mt-4 font-serif text-5xl md:text-6xl">
-            On <em>slowness</em>, <br />and paper.
+            Debora Novianti
           </h2>
           <div className="mt-8 space-y-6 text-lg leading-relaxed">
             <p>
-              <span className="font-serif text-4xl italic">I</span> keep a small
-              practice on purpose. Two clients a season, sometimes three,
-              carried through from first sketch to press check. What that
-              buys is time — the kind that lets a mark settle into a shape,
-              and a shape into a system.
-            </p>
-            <p className="text-foreground/70">
-              Trained at Konstfack. Formerly of Pentagram (London) and
-              Stockholm Design Lab. Teaching typography at Beckmans, one
-              afternoon a week. Writing occasionally for Eye and Slanted.
+              An independent graphic designer crafting visual{" "}
+              <em>identities</em>, editorial design and marketing materials
+              that combine aesthetics with strategic communication.
             </p>
           </div>
 
-          <div className="rule mt-10" />
-          <div className="mt-6 grid grid-cols-2 gap-y-4 text-sm">
-            <span className="text-foreground/60">Clients include</span>
-            <span>Aesop · Fogia · Hem · Moderna Museet · Nordiska</span>
-            <span className="text-foreground/60">Press</span>
-            <span>Eye N°103 · It's Nice That · Slanted 42</span>
-            <span className="text-foreground/60">Selected talks</span>
-            <span>OFFF 2024 · Typographics NYC · Nicer Tuesdays</span>
+          <div className="mt-10">
+            <a
+              href="#"
+              className="inline-flex items-center gap-2 border border-foreground bg-foreground px-6 py-3 text-sm text-background transition-colors hover:bg-background hover:text-foreground"
+            >
+              Download My Resume
+              <span aria-hidden>↓</span>
+            </a>
           </div>
         </div>
       </div>
