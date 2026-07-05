@@ -92,8 +92,16 @@ function LittlePalmerhaus() {
       <section className="border-b border-foreground/20">
         <div className="mx-auto max-w-[1400px] px-6 py-16 md:px-10 md:py-24">
           <div className="eyebrow text-foreground/60">Selected Designs</div>
-          <div className="relative mt-10">
-            <div className="overflow-hidden" ref={emblaRef}>
+          <div className="mt-10 flex items-center gap-4 md:gap-6">
+            <button
+              type="button"
+              aria-label="Previous slide"
+              onClick={() => emblaApi?.scrollPrev()}
+              className="flex h-12 w-12 shrink-0 items-center justify-center rounded-full border border-foreground/30 text-foreground transition hover:bg-foreground hover:text-background md:h-14 md:w-14"
+            >
+              <span aria-hidden className="text-2xl leading-none">←</span>
+            </button>
+            <div className="min-w-0 flex-1 overflow-hidden" ref={emblaRef}>
               <div className="flex">
                 {gallery.map((g, i) => (
                   <div key={i} className="relative min-w-0 shrink-0 grow-0 basis-full">
@@ -109,17 +117,9 @@ function LittlePalmerhaus() {
             </div>
             <button
               type="button"
-              aria-label="Previous slide"
-              onClick={() => emblaApi?.scrollPrev()}
-              className="absolute left-4 top-1/2 -translate-y-1/2 flex h-12 w-12 items-center justify-center rounded-full bg-background/80 text-foreground shadow-md backdrop-blur-sm transition hover:bg-background md:left-6 md:h-14 md:w-14"
-            >
-              <span aria-hidden className="text-2xl leading-none">←</span>
-            </button>
-            <button
-              type="button"
               aria-label="Next slide"
               onClick={() => emblaApi?.scrollNext()}
-              className="absolute right-4 top-1/2 -translate-y-1/2 flex h-12 w-12 items-center justify-center rounded-full bg-background/80 text-foreground shadow-md backdrop-blur-sm transition hover:bg-background md:right-6 md:h-14 md:w-14"
+              className="flex h-12 w-12 shrink-0 items-center justify-center rounded-full border border-foreground/30 text-foreground transition hover:bg-foreground hover:text-background md:h-14 md:w-14"
             >
               <span aria-hidden className="text-2xl leading-none">→</span>
             </button>
