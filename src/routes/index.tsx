@@ -115,7 +115,6 @@ function Masthead() {
         <nav className="hidden gap-8 md:flex">
           <a href="#work" className="text-sm hover:italic">Work</a>
           <a href="#about" className="text-sm hover:italic">About</a>
-          <a href="#work" className="text-sm hover:italic">Work</a>
           <a href="mailto:studio@elinvaher.com" className="text-sm hover:italic">
             Contact
           </a>
