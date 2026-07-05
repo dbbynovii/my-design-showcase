@@ -231,23 +231,33 @@ function Selected() {
         </h2>
 
         <div className="mt-12 border-t border-foreground/30">
-          {rows.map(([title, disc]) => (
-            <a
-              key={title}
-              href="#work"
-              className="group grid grid-cols-[1fr_auto] items-baseline gap-4 border-b border-foreground/20 py-5 transition-colors hover:bg-foreground hover:text-background md:py-7"
-            >
-              <span className="font-serif text-2xl md:text-4xl">
-                {title}
-                <span className="ml-3 inline-block font-sans text-base italic opacity-0 transition-opacity group-hover:opacity-100">
-                  →
+          {rows.map(([title, disc]) => {
+            const isLP = title === "Little Palmerhaus";
+            const className =
+              "group grid grid-cols-[1fr_auto] items-baseline gap-4 border-b border-foreground/20 py-5 transition-colors hover:bg-foreground hover:text-background md:py-7";
+            const inner = (
+              <>
+                <span className="font-serif text-2xl md:text-4xl">
+                  {title}
+                  <span className="ml-3 inline-block font-sans text-base italic opacity-0 transition-opacity group-hover:opacity-100">
+                    →
+                  </span>
                 </span>
-              </span>
-              <span className="text-right text-sm text-foreground/70 group-hover:text-background/70">
-                {disc}
-              </span>
-            </a>
-          ))}
+                <span className="text-right text-sm text-foreground/70 group-hover:text-background/70">
+                  {disc}
+                </span>
+              </>
+            );
+            return isLP ? (
+              <Link key={title} to="/work/little-palmerhaus" className={className}>
+                {inner}
+              </Link>
+            ) : (
+              <a key={title} href="#work" className={className}>
+                {inner}
+              </a>
+            );
+          })}
         </div>
       </div>
     </section>
