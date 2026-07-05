@@ -46,11 +46,17 @@ function LittlePalmerhaus() {
   return (
     <div className="min-h-screen bg-background text-foreground">
       <header className="border-b border-foreground/20">
-        <div className="mx-auto flex max-w-[1400px] items-center justify-between px-6 py-4 md:px-10">
+        <div className="mx-auto flex max-w-[1400px] items-center justify-between gap-6 px-6 py-4 md:px-10">
           <Link to="/" className="eyebrow hover:italic">
             ← Back to Index
           </Link>
-          <span className="eyebrow text-foreground/60">Case Study</span>
+          <nav className="flex gap-8">
+            <Link to="/" hash="work" className="text-sm hover:italic">Work</Link>
+            <Link to="/" hash="about" className="text-sm hover:italic">About</Link>
+            <a href="mailto:studio@elinvaher.com" className="text-sm hover:italic">
+              Contact
+            </a>
+          </nav>
         </div>
       </header>
 
