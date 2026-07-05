@@ -140,6 +140,15 @@ function Hero() {
               className="h-full w-full object-cover"
             />
           </div>
+          <div className="mt-8">
+            <a
+              href="#"
+              className="inline-flex items-center gap-2 border border-foreground bg-foreground px-6 py-3 text-sm text-background transition-colors hover:bg-background hover:text-foreground"
+            >
+              Download My Resume
+              <span aria-hidden>↓</span>
+            </a>
+          </div>
         </div>
 
         <div className="md:col-span-6 md:col-start-7">
@@ -155,15 +164,23 @@ function Hero() {
             </p>
           </div>
 
-          <div className="mt-10">
-            <a
-              href="#"
-              className="inline-flex items-center gap-2 border border-foreground bg-foreground px-6 py-3 text-sm text-background transition-colors hover:bg-background hover:text-foreground"
-            >
-              Download My Resume
-              <span aria-hidden>↓</span>
-            </a>
-          </div>
+          <dl className="mt-12 space-y-5 border-t border-foreground/20 pt-8">
+            {[
+              ["Sinar Mas Land", "2023 — Present"],
+              ["Levantier", "2022 — 2023"],
+              ["IMDA", "2021 — 2022"],
+              ["Little Palmerhaus", "2020 — 2021"],
+              ["Paideia", "2019 — 2020"],
+            ].map(([company, date]) => (
+              <div
+                key={company}
+                className="grid grid-cols-[1fr_auto] items-baseline gap-6"
+              >
+                <dt className="text-lg text-foreground">{company}</dt>
+                <dd className="eyebrow text-foreground/60">{date}</dd>
+              </div>
+            ))}
+          </dl>
         </div>
       </div>
     </section>
@@ -196,15 +213,14 @@ function Marquee() {
 }
 
 function Selected() {
-  const rows = [
-    ["Ampersand & Co.", "Identity", "2026"],
-    ["Fortune Kato, Vol. II", "Editorial", "2025"],
-    ["Vessel — a still life", "Art Direction", "2025"],
-    ["Room for a Portrait", "Exhibition", "2024"],
-    ["North Atlas", "Print", "2024"],
-    ["Paper Almanac", "Typography", "2023"],
-    ["Field Notes N°7", "Editorial", "2023"],
-    ["Small Objects Co.", "Packaging", "2022"],
+  const rows: Array<[string, string]> = [
+    ["Paideia x Google", "Campaign"],
+    ["Stronger Together", "Campaign"],
+    ["Together in Harmony", "Campaign"],
+    ["Guru Kreator", "Social Media"],
+    ["Little Palmerhaus", "Branding"],
+    ["Grab Merchant", "Marketing"],
+    ["Town Talk Polish", "Packaging"],
   ];
   return (
     <section id="work" className="border-b border-foreground/20">
@@ -215,15 +231,12 @@ function Selected() {
         </h2>
 
         <div className="mt-12 border-t border-foreground/30">
-          {rows.map(([title, disc, yr]) => (
+          {rows.map(([title, disc]) => (
             <a
               key={title}
               href="#work"
-              className="group grid grid-cols-[4rem_1fr_auto] items-baseline gap-4 border-b border-foreground/20 py-5 transition-colors hover:bg-foreground hover:text-background sm:grid-cols-[5rem_1fr_1fr] md:py-7"
+              className="group grid grid-cols-[1fr_auto] items-baseline gap-4 border-b border-foreground/20 py-5 transition-colors hover:bg-foreground hover:text-background md:py-7"
             >
-              <span className="eyebrow text-foreground/60 group-hover:text-background/60">
-                {yr}
-              </span>
               <span className="font-serif text-2xl md:text-4xl">
                 {title}
                 <span className="ml-3 inline-block font-sans text-base italic opacity-0 transition-opacity group-hover:opacity-100">
