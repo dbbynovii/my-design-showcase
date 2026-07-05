@@ -206,13 +206,13 @@ function Marquee() {
 
 function Selected() {
   const rows: Array<[string, string]> = [
-    ["Paideia x Google", "Campaign"],
-    ["Stronger Together", "Campaign"],
-    ["Together in Harmony", "Campaign"],
-    ["Guru Kreator", "Social Media"],
-    ["Little Palmerhaus", "Branding"],
-    ["Grab Merchant", "Marketing"],
-    ["Town Talk Polish", "Packaging"],
+    ["Paideia Educational Solutions x Google", "Brand Collateral Design"],
+    ["Stronger Together", "Identity"],
+    ["Together in Harmony", "Identity"],
+    ["Guru Kreator", "Social Media Design"],
+    ["Little Palmerhaus", "Social Media & Ecommerce Design"],
+    ["Grab Merchant", "Social Media & Ads Design"],
+    ["Town Talk Polish Indonesia", "Social Media Design"],
   ];
   return (
     <section id="work" className="border-b border-foreground/20">
