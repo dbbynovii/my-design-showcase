@@ -105,23 +105,14 @@ function Banner() {
 function Masthead() {
   return (
     <header className="border-b border-foreground/20">
-      <div className="mx-auto grid max-w-[1400px] grid-cols-[minmax(0,1fr)_auto] items-center gap-4 px-6 py-4 sm:flex sm:flex-wrap sm:justify-between md:px-10">
-        <div className="flex min-w-0 items-baseline gap-3">
-          <span className="eyebrow">Issue N°014</span>
-          <span className="eyebrow hidden text-foreground/50 sm:inline">
-            Spring / Summer 2026
-          </span>
-        </div>
-        <nav className="hidden gap-8 md:flex">
+      <div className="mx-auto flex max-w-[1400px] items-center justify-center px-6 py-4 md:px-10">
+        <nav className="flex gap-8">
           <a href="#work" className="text-sm hover:italic">Work</a>
           <a href="#about" className="text-sm hover:italic">About</a>
           <a href="mailto:studio@elinvaher.com" className="text-sm hover:italic">
             Contact
           </a>
         </nav>
-        <span className="eyebrow text-foreground/60 justify-self-end sm:justify-self-auto">
-          Stockholm / Remote
-        </span>
       </div>
     </header>
   );
@@ -140,15 +131,6 @@ function Hero() {
               className="h-full w-full object-cover"
             />
           </div>
-          <div className="mt-8">
-            <a
-              href="#"
-              className="inline-flex items-center gap-2 border border-foreground bg-foreground px-6 py-3 text-sm text-background transition-colors hover:bg-background hover:text-foreground"
-            >
-              Download My Resume
-              <span aria-hidden>↓</span>
-            </a>
-          </div>
         </div>
 
         <div className="md:col-span-6 md:col-start-7">
@@ -166,11 +148,11 @@ function Hero() {
 
           <dl className="mt-12 space-y-5 border-t border-foreground/20 pt-8">
             {[
-              ["Sinar Mas Land", "2023 — Present"],
-              ["Levantier", "2022 — 2023"],
-              ["IMDA", "2021 — 2022"],
-              ["Little Palmerhaus", "2020 — 2021"],
-              ["Paideia", "2019 — 2020"],
+              ["Paideia Educational Solutions", "September 2024 – Now"],
+              ["Little Palmerhaus", "May 2022 – August 2024"],
+              ["Indonesia Media Advertising", "March 2022 – May 2022"],
+              ["Levantier Indonesia Group", "November 2020 – January 2021"],
+              ["Sinar Mas Land", "February 2020 – May 2020"],
             ].map(([company, date]) => (
               <div
                 key={company}
@@ -181,6 +163,16 @@ function Hero() {
               </div>
             ))}
           </dl>
+
+          <div className="mt-10">
+            <a
+              href="#"
+              className="inline-flex items-center gap-2 border border-foreground bg-foreground px-6 py-3 text-sm text-background transition-colors hover:bg-background hover:text-foreground"
+            >
+              Download My Resume
+              <span aria-hidden>↓</span>
+            </a>
+          </div>
         </div>
       </div>
     </section>
@@ -214,13 +206,13 @@ function Marquee() {
 
 function Selected() {
   const rows: Array<[string, string]> = [
-    ["Paideia x Google", "Campaign"],
-    ["Stronger Together", "Campaign"],
-    ["Together in Harmony", "Campaign"],
-    ["Guru Kreator", "Social Media"],
-    ["Little Palmerhaus", "Branding"],
-    ["Grab Merchant", "Marketing"],
-    ["Town Talk Polish", "Packaging"],
+    ["Paideia Educational Solutions x Google", "Brand Collateral Design"],
+    ["Stronger Together", "Identity"],
+    ["Together in Harmony", "Identity"],
+    ["Guru Kreator", "Social Media Design"],
+    ["Little Palmerhaus", "Social Media & Ecommerce Design"],
+    ["Grab Merchant", "Social Media & Ads Design"],
+    ["Town Talk Polish Indonesia", "Social Media Design"],
   ];
   return (
     <section id="work" className="border-b border-foreground/20">
