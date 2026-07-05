@@ -1,4 +1,7 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
+import { useEffect, useState } from "react";
+import useEmblaCarousel from "embla-carousel-react";
+import Autoplay from "embla-carousel-autoplay";
 import mainAsset from "@/assets/lp-main.png.asset.json";
 import lp1 from "@/assets/lp-1.png.asset.json";
 import lp2 from "@/assets/lp-2.png.asset.json";
