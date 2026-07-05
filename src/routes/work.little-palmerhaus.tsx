@@ -67,7 +67,7 @@ function LittlePalmerhaus() {
       </header>
 
       <section className="border-b border-foreground/20">
-        <div className="mx-auto max-w-[1600px] px-6 pt-10 md:px-10 md:pt-14">
+        <div className="mx-auto max-w-[1400px] px-6 pt-10 md:px-10 md:pt-14">
           <div className="overflow-hidden">
             <img
               src={mainAsset.url}
