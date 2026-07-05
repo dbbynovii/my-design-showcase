@@ -83,8 +83,6 @@ function Index() {
       <Hero />
       <Marquee />
       <Selected />
-      <About />
-      <Index_ />
       <Colophon />
     </div>
   );
