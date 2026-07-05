@@ -131,15 +131,6 @@ function Hero() {
               className="h-full w-full object-cover"
             />
           </div>
-          <div className="mt-8">
-            <a
-              href="#"
-              className="inline-flex items-center gap-2 border border-foreground bg-foreground px-6 py-3 text-sm text-background transition-colors hover:bg-background hover:text-foreground"
-            >
-              Download My Resume
-              <span aria-hidden>↓</span>
-            </a>
-          </div>
         </div>
 
         <div className="md:col-span-6 md:col-start-7">
@@ -157,11 +148,11 @@ function Hero() {
 
           <dl className="mt-12 space-y-5 border-t border-foreground/20 pt-8">
             {[
-              ["Sinar Mas Land", "2023 — Present"],
-              ["Levantier", "2022 — 2023"],
-              ["IMDA", "2021 — 2022"],
-              ["Little Palmerhaus", "2020 — 2021"],
-              ["Paideia", "2019 — 2020"],
+              ["Paideia Educational Solutions", "September 2024 – Now"],
+              ["Little Palmerhaus", "May 2022 – August 2024"],
+              ["Indonesia Media Advertising", "March 2022 – May 2022"],
+              ["Levantier Indonesia Group", "November 2020 – January 2021"],
+              ["Sinar Mas Land", "February 2020 – May 2020"],
             ].map(([company, date]) => (
               <div
                 key={company}
@@ -172,6 +163,16 @@ function Hero() {
               </div>
             ))}
           </dl>
+
+          <div className="mt-10">
+            <a
+              href="#"
+              className="inline-flex items-center gap-2 border border-foreground bg-foreground px-6 py-3 text-sm text-background transition-colors hover:bg-background hover:text-foreground"
+            >
+              Download My Resume
+              <span aria-hidden>↓</span>
+            </a>
+          </div>
         </div>
       </div>
     </section>
