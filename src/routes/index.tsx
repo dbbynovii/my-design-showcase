@@ -105,23 +105,14 @@ function Banner() {
 function Masthead() {
   return (
     <header className="border-b border-foreground/20">
-      <div className="mx-auto grid max-w-[1400px] grid-cols-[minmax(0,1fr)_auto] items-center gap-4 px-6 py-4 sm:flex sm:flex-wrap sm:justify-between md:px-10">
-        <div className="flex min-w-0 items-baseline gap-3">
-          <span className="eyebrow">Issue N°014</span>
-          <span className="eyebrow hidden text-foreground/50 sm:inline">
-            Spring / Summer 2026
-          </span>
-        </div>
-        <nav className="hidden gap-8 md:flex">
+      <div className="mx-auto flex max-w-[1400px] items-center justify-center px-6 py-4 md:px-10">
+        <nav className="flex gap-8">
           <a href="#work" className="text-sm hover:italic">Work</a>
           <a href="#about" className="text-sm hover:italic">About</a>
           <a href="mailto:studio@elinvaher.com" className="text-sm hover:italic">
             Contact
           </a>
         </nav>
-        <span className="eyebrow text-foreground/60 justify-self-end sm:justify-self-auto">
-          Stockholm / Remote
-        </span>
       </div>
     </header>
   );
