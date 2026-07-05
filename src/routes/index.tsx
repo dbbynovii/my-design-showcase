@@ -213,15 +213,14 @@ function Marquee() {
 }
 
 function Selected() {
-  const rows = [
-    ["Ampersand & Co.", "Identity", "2026"],
-    ["Fortune Kato, Vol. II", "Editorial", "2025"],
-    ["Vessel — a still life", "Art Direction", "2025"],
-    ["Room for a Portrait", "Exhibition", "2024"],
-    ["North Atlas", "Print", "2024"],
-    ["Paper Almanac", "Typography", "2023"],
-    ["Field Notes N°7", "Editorial", "2023"],
-    ["Small Objects Co.", "Packaging", "2022"],
+  const rows: Array<[string, string]> = [
+    ["Paideia x Google", "Campaign"],
+    ["Stronger Together", "Campaign"],
+    ["Together in Harmony", "Campaign"],
+    ["Guru Kreator", "Social Media"],
+    ["Little Palmerhaus", "Branding"],
+    ["Grab Merchant", "Marketing"],
+    ["Town Talk Polish", "Packaging"],
   ];
   return (
     <section id="work" className="border-b border-foreground/20">
