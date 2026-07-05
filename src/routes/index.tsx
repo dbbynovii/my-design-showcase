@@ -175,21 +175,51 @@ function Masthead() {
 
 function Hero() {
   return (
-    <section className="border-b border-foreground/20">
-      <div className="mx-auto max-w-[1400px] px-6 pt-12 pb-16 md:px-10 md:pt-20 md:pb-24">
-        <div className="eyebrow text-foreground/60">The Cover — Portrait of a Practice</div>
-
-        <h1 className="rise-in mt-8 font-serif text-[15vw] leading-[0.88] tracking-[-0.02em] md:text-[10.5rem]">
-          <span className="italic">Debora Novianti</span>
-          <span className="align-top text-3xl md:text-5xl"> ✳</span>
-        </h1>
-
-        <div className="mt-10 grid grid-cols-1 gap-10 md:grid-cols-12">
-          <p className="serif col-span-1 text-2xl leading-[1.15] md:col-span-7 md:text-4xl">
-            An independent graphic designer crafting visual
-            <em> identities</em>, editorial design, marketing materials
-            that combine aesthetics with strategic communication.
+    <section id="about" className="border-b border-foreground/20">
+      <div className="mx-auto grid max-w-[1400px] grid-cols-1 gap-12 px-6 py-16 md:grid-cols-12 md:gap-16 md:px-10 md:py-24">
+        <div className="md:col-span-5">
+          <div className="aspect-[4/5] overflow-hidden bg-muted">
+            <img
+              src={portrait}
+              alt="Portrait of Debora Novianti"
+              loading="lazy"
+              className="h-full w-full object-cover"
+            />
+          </div>
+          <p className="mt-3 font-serif italic text-foreground/60">
+            Fig. 1 — The designer in her studio, March 2026.
           </p>
+        </div>
+
+        <div className="md:col-span-6 md:col-start-7">
+          <div className="eyebrow text-foreground/60">The Interview</div>
+          <h2 className="mt-4 font-serif text-5xl md:text-6xl">
+            On <em>slowness</em>, <br />and paper.
+          </h2>
+          <div className="mt-8 space-y-6 text-lg leading-relaxed">
+            <p>
+              <span className="font-serif text-4xl italic">I</span> keep a small
+              practice on purpose. Two clients a season, sometimes three,
+              carried through from first sketch to press check. What that
+              buys is time — the kind that lets a mark settle into a shape,
+              and a shape into a system.
+            </p>
+            <p className="text-foreground/70">
+              Trained at Konstfack. Formerly of Pentagram (London) and
+              Stockholm Design Lab. Teaching typography at Beckmans, one
+              afternoon a week. Writing occasionally for Eye and Slanted.
+            </p>
+          </div>
+
+          <div className="rule mt-10" />
+          <div className="mt-6 grid grid-cols-2 gap-y-4 text-sm">
+            <span className="text-foreground/60">Clients include</span>
+            <span>Aesop · Fogia · Hem · Moderna Museet · Nordiska</span>
+            <span className="text-foreground/60">Press</span>
+            <span>Eye N°103 · It's Nice That · Slanted 42</span>
+            <span className="text-foreground/60">Selected talks</span>
+            <span>OFFF 2024 · Typographics NYC · Nicer Tuesdays</span>
+          </div>
         </div>
       </div>
     </section>
