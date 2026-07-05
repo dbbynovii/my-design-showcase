@@ -10,33 +10,43 @@
 
 import { Route as rootRouteImport } from './routes/__root'
 import { Route as IndexRouteImport } from './routes/index'
+import { Route as WorkLittlePalmerhausRouteImport } from './routes/work.little-palmerhaus'
 
 const IndexRoute = IndexRouteImport.update({
   id: '/',
   path: '/',
   getParentRoute: () => rootRouteImport,
 } as any)
+const WorkLittlePalmerhausRoute = WorkLittlePalmerhausRouteImport.update({
+  id: '/work/little-palmerhaus',
+  path: '/work/little-palmerhaus',
+  getParentRoute: () => rootRouteImport,
+} as any)
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
+  '/work/little-palmerhaus': typeof WorkLittlePalmerhausRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
+  '/work/little-palmerhaus': typeof WorkLittlePalmerhausRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
+  '/work/little-palmerhaus': typeof WorkLittlePalmerhausRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
-  fullPaths: '/'
+  fullPaths: '/' | '/work/little-palmerhaus'
   fileRoutesByTo: FileRoutesByTo
-  to: '/'
-  id: '__root__' | '/'
+  to: '/' | '/work/little-palmerhaus'
+  id: '__root__' | '/' | '/work/little-palmerhaus'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
+  WorkLittlePalmerhausRoute: typeof WorkLittlePalmerhausRoute
 }
 
 declare module '@tanstack/react-router' {
@@ -48,11 +58,19 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof IndexRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/work/little-palmerhaus': {
+      id: '/work/little-palmerhaus'
+      path: '/work/little-palmerhaus'
+      fullPath: '/work/little-palmerhaus'
+      preLoaderRoute: typeof WorkLittlePalmerhausRouteImport
+      parentRoute: typeof rootRouteImport
+    }
   }
 }
 
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
+  WorkLittlePalmerhausRoute: WorkLittlePalmerhausRoute,
 }
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)
