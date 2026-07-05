@@ -231,15 +231,12 @@ function Selected() {
         </h2>
 
         <div className="mt-12 border-t border-foreground/30">
-          {rows.map(([title, disc, yr]) => (
+          {rows.map(([title, disc]) => (
             <a
               key={title}
               href="#work"
-              className="group grid grid-cols-[4rem_1fr_auto] items-baseline gap-4 border-b border-foreground/20 py-5 transition-colors hover:bg-foreground hover:text-background sm:grid-cols-[5rem_1fr_1fr] md:py-7"
+              className="group grid grid-cols-[1fr_auto] items-baseline gap-4 border-b border-foreground/20 py-5 transition-colors hover:bg-foreground hover:text-background md:py-7"
             >
-              <span className="eyebrow text-foreground/60 group-hover:text-background/60">
-                {yr}
-              </span>
               <span className="font-serif text-2xl md:text-4xl">
                 {title}
                 <span className="ml-3 inline-block font-sans text-base italic opacity-0 transition-opacity group-hover:opacity-100">
