@@ -5,24 +5,20 @@ import portrait from "@/assets/portrait.jpg";
 import bannerAsset from "@/assets/banner.png.asset.json";
 import kidsAsset from "@/assets/kids.png.asset.json";
 import gkAsset from "@/assets/gk.png.asset.json";
-import work01 from "@/assets/work-01.jpg";
-import work02 from "@/assets/work-02.jpg";
-import work03 from "@/assets/work-03.jpg";
-import work04 from "@/assets/work-04.jpg";
 
 export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
-      { title: "Elin Vaher — Independent Designer, Issue N°014" },
+      { title: "Debora Novianti — Independent Graphic Designer" },
       {
         name: "description",
         content:
-          "Portfolio of Elin Vaher — independent designer working in identity, editorial, and art direction. Selected works 2019–2026.",
+          "Portfolio of Debora Novianti — independent graphic designer crafting visual identities, editorial design, and marketing materials.",
       },
-      { property: "og:title", content: "Elin Vaher — Independent Designer" },
+      { property: "og:title", content: "Debora Novianti — Independent Graphic Designer" },
       {
         property: "og:description",
-        content: "Selected works in identity, editorial, and art direction.",
+        content: "Visual identities, editorial design, and marketing materials.",
       },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },
@@ -31,48 +27,7 @@ export const Route = createFileRoute("/")({
   component: Index,
 });
 
-const works = [
-  {
-    n: "01",
-    title: "Ampersand & Co.",
-    client: "Ampersand Studio",
-    year: "2026",
-    discipline: "Identity",
-    image: work01,
-    span: "lg:col-span-7 lg:row-span-2",
-    ratio: "aspect-[4/5]",
-  },
-  {
-    n: "02",
-    title: "Fortune Kato, Vol. II",
-    client: "Kato Press",
-    year: "2025",
-    discipline: "Editorial",
-    image: work02,
-    span: "lg:col-span-5",
-    ratio: "aspect-[5/4]",
-  },
-  {
-    n: "03",
-    title: "Vessel — a still life",
-    client: "Objet Étude",
-    year: "2025",
-    discipline: "Art Direction",
-    image: work03,
-    span: "lg:col-span-5",
-    ratio: "aspect-[4/5]",
-  },
-  {
-    n: "04",
-    title: "Room for a Portrait",
-    client: "Galerie Nord",
-    year: "2024",
-    discipline: "Exhibition",
-    image: work04,
-    span: "lg:col-span-12",
-    ratio: "aspect-[16/9]",
-  },
-];
+
 
 function Index() {
   return (
