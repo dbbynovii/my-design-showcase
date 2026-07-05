@@ -41,19 +41,6 @@ function LittlePalmerhaus() {
   const [emblaRef, emblaApi] = useEmblaCarousel({ loop: true }, [
     Autoplay({ delay: 4000, stopOnInteraction: false, stopOnMouseEnter: true }),
   ]);
-  const [selected, setSelected] = useState(0);
-
-  useEffect(() => {
-    if (!emblaApi) return;
-    const onSelect = () => setSelected(emblaApi.selectedScrollSnap());
-    onSelect();
-    emblaApi.on("select", onSelect);
-    emblaApi.on("reInit", onSelect);
-    return () => {
-      emblaApi.off("select", onSelect);
-      emblaApi.off("reInit", onSelect);
-    };
-  }, [emblaApi]);
 
   return (
     <div className="min-h-screen bg-background text-foreground">
