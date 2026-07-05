@@ -140,6 +140,15 @@ function Hero() {
               className="h-full w-full object-cover"
             />
           </div>
+          <div className="mt-8">
+            <a
+              href="#"
+              className="inline-flex items-center gap-2 border border-foreground bg-foreground px-6 py-3 text-sm text-background transition-colors hover:bg-background hover:text-foreground"
+            >
+              Download My Resume
+              <span aria-hidden>↓</span>
+            </a>
+          </div>
         </div>
 
         <div className="md:col-span-6 md:col-start-7">
@@ -155,15 +164,23 @@ function Hero() {
             </p>
           </div>
 
-          <div className="mt-10">
-            <a
-              href="#"
-              className="inline-flex items-center gap-2 border border-foreground bg-foreground px-6 py-3 text-sm text-background transition-colors hover:bg-background hover:text-foreground"
-            >
-              Download My Resume
-              <span aria-hidden>↓</span>
-            </a>
-          </div>
+          <dl className="mt-12 space-y-5 border-t border-foreground/20 pt-8">
+            {[
+              ["Sinar Mas Land", "2023 — Present"],
+              ["Levantier", "2022 — 2023"],
+              ["IMDA", "2021 — 2022"],
+              ["Little Palmerhaus", "2020 — 2021"],
+              ["Paideia", "2019 — 2020"],
+            ].map(([company, date]) => (
+              <div
+                key={company}
+                className="grid grid-cols-[1fr_auto] items-baseline gap-6"
+              >
+                <dt className="text-lg text-foreground">{company}</dt>
+                <dd className="eyebrow text-foreground/60">{date}</dd>
+              </div>
+            ))}
+          </dl>
         </div>
       </div>
     </section>
