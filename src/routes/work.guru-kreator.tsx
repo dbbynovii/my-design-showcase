@@ -64,14 +64,14 @@ function GuruKreator() {
           </div>
         </div>
 
-        <div className="mx-auto grid max-w-[1400px] grid-cols-1 gap-12 px-6 py-16 md:grid-cols-12 md:gap-16 md:px-10 md:py-24">
-          <div className="md:col-span-7">
+        <div className="mx-auto grid max-w-[1400px] grid-cols-1 gap-6 px-6 py-16 md:grid-cols-12 md:gap-8 md:px-10 md:py-24">
+          <div className="md:col-span-6">
             <div className="eyebrow text-foreground/60">Guru Kreator</div>
             <h1 className="mt-4 font-serif text-5xl leading-[1.05] md:text-7xl">
               <em>Social Media</em>
             </h1>
           </div>
-          <div className="md:col-span-5">
+          <div className="md:col-span-6">
             <p className="text-lg leading-relaxed">
               Guru Kreator is an Indonesian-based Learning Management System
               (LMS) platform focused on empowering educators, and students to
@@ -82,6 +82,24 @@ function GuruKreator() {
               collateral design that support broad company objectives and
               internal needs.
             </p>
+          </div>
+        </div>
+      </section>
+
+      <section className="border-b border-foreground/20">
+        <div className="mx-auto max-w-[1400px] px-6 py-16 md:px-10 md:py-24">
+          <div className="eyebrow text-foreground/60">Featured Videos</div>
+          <div className="mt-10 grid grid-cols-1 gap-6 sm:grid-cols-3 md:gap-8">
+            {[video1, video2, video3].map((v, i) => (
+              <video
+                key={i}
+                src={v.url}
+                controls
+                playsInline
+                preload="metadata"
+                className="aspect-[9/16] w-full rounded-sm bg-foreground/5 object-cover"
+              />
+            ))}
           </div>
         </div>
       </section>
