@@ -224,7 +224,12 @@ function Selected() {
 
         <div className="mt-12 border-t border-foreground/30">
           {rows.map(([title, disc]) => {
-            const isLP = title === "Little Palmerhaus";
+            const linkTo =
+              title === "Little Palmerhaus"
+                ? "/work/little-palmerhaus"
+                : title === "Grab Merchant"
+                  ? "/work/grab-merchant"
+                  : null;
             const className =
               "group grid grid-cols-[1fr_auto] items-baseline gap-4 border-b border-foreground/20 py-5 transition-colors hover:bg-foreground hover:text-background md:py-7";
             const inner = (
@@ -240,8 +245,8 @@ function Selected() {
                 </span>
               </>
             );
-            return isLP ? (
-              <Link key={title} to="/work/little-palmerhaus" className={className}>
+            return linkTo ? (
+              <Link key={title} to={linkTo} className={className}>
                 {inner}
               </Link>
             ) : (
@@ -250,6 +255,7 @@ function Selected() {
               </a>
             );
           })}
+
         </div>
       </div>
     </section>
