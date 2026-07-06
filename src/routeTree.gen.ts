@@ -11,6 +11,7 @@
 import { Route as rootRouteImport } from './routes/__root'
 import { Route as IndexRouteImport } from './routes/index'
 import { Route as WorkLittlePalmerhausRouteImport } from './routes/work.little-palmerhaus'
+import { Route as WorkGuruKreatorRouteImport } from './routes/work.guru-kreator'
 import { Route as WorkGrabMerchantRouteImport } from './routes/work.grab-merchant'
 
 const IndexRoute = IndexRouteImport.update({
@@ -23,6 +24,11 @@ const WorkLittlePalmerhausRoute = WorkLittlePalmerhausRouteImport.update({
   path: '/work/little-palmerhaus',
   getParentRoute: () => rootRouteImport,
 } as any)
+const WorkGuruKreatorRoute = WorkGuruKreatorRouteImport.update({
+  id: '/work/guru-kreator',
+  path: '/work/guru-kreator',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const WorkGrabMerchantRoute = WorkGrabMerchantRouteImport.update({
   id: '/work/grab-merchant',
   path: '/work/grab-merchant',
@@ -32,30 +38,47 @@ const WorkGrabMerchantRoute = WorkGrabMerchantRouteImport.update({
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
   '/work/grab-merchant': typeof WorkGrabMerchantRoute
+  '/work/guru-kreator': typeof WorkGuruKreatorRoute
   '/work/little-palmerhaus': typeof WorkLittlePalmerhausRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
   '/work/grab-merchant': typeof WorkGrabMerchantRoute
+  '/work/guru-kreator': typeof WorkGuruKreatorRoute
   '/work/little-palmerhaus': typeof WorkLittlePalmerhausRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
   '/work/grab-merchant': typeof WorkGrabMerchantRoute
+  '/work/guru-kreator': typeof WorkGuruKreatorRoute
   '/work/little-palmerhaus': typeof WorkLittlePalmerhausRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
-  fullPaths: '/' | '/work/grab-merchant' | '/work/little-palmerhaus'
+  fullPaths:
+    | '/'
+    | '/work/grab-merchant'
+    | '/work/guru-kreator'
+    | '/work/little-palmerhaus'
   fileRoutesByTo: FileRoutesByTo
-  to: '/' | '/work/grab-merchant' | '/work/little-palmerhaus'
-  id: '__root__' | '/' | '/work/grab-merchant' | '/work/little-palmerhaus'
+  to:
+    | '/'
+    | '/work/grab-merchant'
+    | '/work/guru-kreator'
+    | '/work/little-palmerhaus'
+  id:
+    | '__root__'
+    | '/'
+    | '/work/grab-merchant'
+    | '/work/guru-kreator'
+    | '/work/little-palmerhaus'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
   WorkGrabMerchantRoute: typeof WorkGrabMerchantRoute
+  WorkGuruKreatorRoute: typeof WorkGuruKreatorRoute
   WorkLittlePalmerhausRoute: typeof WorkLittlePalmerhausRoute
 }
 
@@ -75,6 +98,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof WorkLittlePalmerhausRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/work/guru-kreator': {
+      id: '/work/guru-kreator'
+      path: '/work/guru-kreator'
+      fullPath: '/work/guru-kreator'
+      preLoaderRoute: typeof WorkGuruKreatorRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/work/grab-merchant': {
       id: '/work/grab-merchant'
       path: '/work/grab-merchant'
@@ -88,6 +118,7 @@ declare module '@tanstack/react-router' {
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
   WorkGrabMerchantRoute: WorkGrabMerchantRoute,
+  WorkGuruKreatorRoute: WorkGuruKreatorRoute,
   WorkLittlePalmerhausRoute: WorkLittlePalmerhausRoute,
 }
 export const routeTree = rootRouteImport

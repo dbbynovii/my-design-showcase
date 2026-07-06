@@ -229,7 +229,9 @@ function Selected() {
                 ? "/work/little-palmerhaus"
                 : title === "Grab Merchant"
                   ? "/work/grab-merchant"
-                  : null;
+                  : title === "Guru Kreator"
+                    ? "/work/guru-kreator"
+                    : null;
             const className =
               "group grid grid-cols-[1fr_auto] items-baseline gap-4 border-b border-foreground/20 py-5 transition-colors hover:bg-foreground hover:text-background md:py-7";
             const inner = (
