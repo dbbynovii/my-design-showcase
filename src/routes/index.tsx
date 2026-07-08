@@ -281,31 +281,12 @@ function Colophon() {
               <em>make together?</em>
             </p>
             <a
-              href="mailto:studio@elinvaher.com"
+              href="mailto:dbbynovii@gmail.com"
               className="mt-10 inline-block font-serif text-3xl italic underline decoration-1 underline-offset-8 hover:no-underline md:text-4xl"
             >
-              studio@elinvaher.com
+              dbbynovii@gmail.com
             </a>
           </div>
-
-          <div className="md:col-span-3 md:col-start-10">
-            <div className="eyebrow text-background/60">Colophon</div>
-            <p className="mt-6 text-sm leading-relaxed text-background/80">
-              Set in Instrument Serif &amp; Work Sans. Printed on the web,
-              in Stockholm. Photography by the studio. All work © Elin
-              Vaher, 2016 — 2026.
-            </p>
-            <div className="mt-8 flex flex-col gap-2 text-sm">
-              <a href="#" className="hover:italic">Instagram</a>
-              <a href="#" className="hover:italic">Are.na</a>
-              <a href="#" className="hover:italic">LinkedIn</a>
-            </div>
-          </div>
-        </div>
-
-        <div className="mt-16 flex items-center justify-between border-t border-background/20 pt-6 text-xs text-background/60">
-          <span>Issue N°014 — Spring / Summer 2026</span>
-          <span>Printed with care</span>
         </div>
       </div>
     </footer>
