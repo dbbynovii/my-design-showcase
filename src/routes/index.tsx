@@ -50,7 +50,9 @@ function Banner() {
     { src: kidsAsset.url, alt: "Little Wear by Little Palmerhaus" },
     { src: gkAsset.url, alt: "Guru Kreator — Instagram posts" },
   ];
-  const [emblaRef, emblaApi] = useEmblaCarousel({ loop: true });
+  const [emblaRef, emblaApi] = useEmblaCarousel({ loop: true }, [
+    Autoplay({ delay: 4000, stopOnInteraction: false, stopOnMouseEnter: true }),
+  ]);
   const [selected, setSelected] = useState(0);
 
   useEffect(() => {
