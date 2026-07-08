@@ -12,6 +12,7 @@ import { Route as rootRouteImport } from './routes/__root'
 import { Route as IndexRouteImport } from './routes/index'
 import { Route as WorkTownTalkRouteImport } from './routes/work.town-talk'
 import { Route as WorkStrongerTogetherRouteImport } from './routes/work.stronger-together'
+import { Route as WorkPaideiaGoogleRouteImport } from './routes/work.paideia-google'
 import { Route as WorkLittlePalmerhausRouteImport } from './routes/work.little-palmerhaus'
 import { Route as WorkGuruKreatorRouteImport } from './routes/work.guru-kreator'
 import { Route as WorkGrabMerchantRouteImport } from './routes/work.grab-merchant'
@@ -29,6 +30,11 @@ const WorkTownTalkRoute = WorkTownTalkRouteImport.update({
 const WorkStrongerTogetherRoute = WorkStrongerTogetherRouteImport.update({
   id: '/work/stronger-together',
   path: '/work/stronger-together',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const WorkPaideiaGoogleRoute = WorkPaideiaGoogleRouteImport.update({
+  id: '/work/paideia-google',
+  path: '/work/paideia-google',
   getParentRoute: () => rootRouteImport,
 } as any)
 const WorkLittlePalmerhausRoute = WorkLittlePalmerhausRouteImport.update({
@@ -52,6 +58,7 @@ export interface FileRoutesByFullPath {
   '/work/grab-merchant': typeof WorkGrabMerchantRoute
   '/work/guru-kreator': typeof WorkGuruKreatorRoute
   '/work/little-palmerhaus': typeof WorkLittlePalmerhausRoute
+  '/work/paideia-google': typeof WorkPaideiaGoogleRoute
   '/work/stronger-together': typeof WorkStrongerTogetherRoute
   '/work/town-talk': typeof WorkTownTalkRoute
 }
@@ -60,6 +67,7 @@ export interface FileRoutesByTo {
   '/work/grab-merchant': typeof WorkGrabMerchantRoute
   '/work/guru-kreator': typeof WorkGuruKreatorRoute
   '/work/little-palmerhaus': typeof WorkLittlePalmerhausRoute
+  '/work/paideia-google': typeof WorkPaideiaGoogleRoute
   '/work/stronger-together': typeof WorkStrongerTogetherRoute
   '/work/town-talk': typeof WorkTownTalkRoute
 }
@@ -69,6 +77,7 @@ export interface FileRoutesById {
   '/work/grab-merchant': typeof WorkGrabMerchantRoute
   '/work/guru-kreator': typeof WorkGuruKreatorRoute
   '/work/little-palmerhaus': typeof WorkLittlePalmerhausRoute
+  '/work/paideia-google': typeof WorkPaideiaGoogleRoute
   '/work/stronger-together': typeof WorkStrongerTogetherRoute
   '/work/town-talk': typeof WorkTownTalkRoute
 }
@@ -79,6 +88,7 @@ export interface FileRouteTypes {
     | '/work/grab-merchant'
     | '/work/guru-kreator'
     | '/work/little-palmerhaus'
+    | '/work/paideia-google'
     | '/work/stronger-together'
     | '/work/town-talk'
   fileRoutesByTo: FileRoutesByTo
@@ -87,6 +97,7 @@ export interface FileRouteTypes {
     | '/work/grab-merchant'
     | '/work/guru-kreator'
     | '/work/little-palmerhaus'
+    | '/work/paideia-google'
     | '/work/stronger-together'
     | '/work/town-talk'
   id:
@@ -95,6 +106,7 @@ export interface FileRouteTypes {
     | '/work/grab-merchant'
     | '/work/guru-kreator'
     | '/work/little-palmerhaus'
+    | '/work/paideia-google'
     | '/work/stronger-together'
     | '/work/town-talk'
   fileRoutesById: FileRoutesById
@@ -104,6 +116,7 @@ export interface RootRouteChildren {
   WorkGrabMerchantRoute: typeof WorkGrabMerchantRoute
   WorkGuruKreatorRoute: typeof WorkGuruKreatorRoute
   WorkLittlePalmerhausRoute: typeof WorkLittlePalmerhausRoute
+  WorkPaideiaGoogleRoute: typeof WorkPaideiaGoogleRoute
   WorkStrongerTogetherRoute: typeof WorkStrongerTogetherRoute
   WorkTownTalkRoute: typeof WorkTownTalkRoute
 }
@@ -129,6 +142,13 @@ declare module '@tanstack/react-router' {
       path: '/work/stronger-together'
       fullPath: '/work/stronger-together'
       preLoaderRoute: typeof WorkStrongerTogetherRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/work/paideia-google': {
+      id: '/work/paideia-google'
+      path: '/work/paideia-google'
+      fullPath: '/work/paideia-google'
+      preLoaderRoute: typeof WorkPaideiaGoogleRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/work/little-palmerhaus': {
@@ -160,6 +180,7 @@ const rootRouteChildren: RootRouteChildren = {
   WorkGrabMerchantRoute: WorkGrabMerchantRoute,
   WorkGuruKreatorRoute: WorkGuruKreatorRoute,
   WorkLittlePalmerhausRoute: WorkLittlePalmerhausRoute,
+  WorkPaideiaGoogleRoute: WorkPaideiaGoogleRoute,
   WorkStrongerTogetherRoute: WorkStrongerTogetherRoute,
   WorkTownTalkRoute: WorkTownTalkRoute,
 }
