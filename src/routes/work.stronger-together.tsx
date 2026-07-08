@@ -36,9 +36,7 @@ function StrongerTogether() {
           <nav className="flex gap-8">
             <Link to="/" hash="work" className="text-sm hover:italic">Work</Link>
             <Link to="/" hash="about" className="text-sm hover:italic">About</Link>
-            <a href="mailto:dbbynovii@gmail.com" className="text-sm hover:italic">
-              Contact
-            </a>
+            <Link to="/" hash="contact" className="text-sm hover:italic">Contact</Link>
           </nav>
         </div>
       </header>
