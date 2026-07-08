@@ -70,16 +70,34 @@ function Banner() {
   return (
     <section className="border-b border-foreground/20">
       <div className="mx-auto max-w-[1400px] px-6 pt-8 pb-6 md:px-10 md:pt-10">
-        <div className="overflow-hidden" ref={emblaRef}>
-          <div className="flex">
-            {slides.map((s, i) => (
-              <div key={i} className="relative min-w-0 shrink-0 grow-0 basis-full">
-                <div className="aspect-[1920/860] overflow-hidden">
-                  <img src={s.src} alt={s.alt} className="h-full w-full object-cover" />
+        <div className="flex items-center gap-3 md:gap-4">
+          <button
+            type="button"
+            aria-label="Previous slide"
+            onClick={() => emblaApi?.scrollPrev()}
+            className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full border border-foreground/30 text-foreground transition hover:bg-foreground hover:text-background md:h-12 md:w-12"
+          >
+            <span aria-hidden className="text-xl leading-none">←</span>
+          </button>
+          <div className="min-w-0 flex-1 overflow-hidden" ref={emblaRef}>
+            <div className="flex">
+              {slides.map((s, i) => (
+                <div key={i} className="relative min-w-0 shrink-0 grow-0 basis-full">
+                  <div className="aspect-[1920/860] overflow-hidden">
+                    <img src={s.src} alt={s.alt} className="h-full w-full object-cover" />
+                  </div>
                 </div>
-              </div>
-            ))}
+              ))}
+            </div>
           </div>
+          <button
+            type="button"
+            aria-label="Next slide"
+            onClick={() => emblaApi?.scrollNext()}
+            className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full border border-foreground/30 text-foreground transition hover:bg-foreground hover:text-background md:h-12 md:w-12"
+          >
+            <span aria-hidden className="text-xl leading-none">→</span>
+          </button>
         </div>
         <div className="mt-5 flex justify-center gap-2">
           {slides.map((_, i) => (
