@@ -109,7 +109,7 @@ function Masthead() {
         <nav className="flex gap-8">
           <a href="#work" className="text-sm hover:italic">Work</a>
           <a href="#about" className="text-sm hover:italic">About</a>
-          <a href="mailto:studio@elinvaher.com" className="text-sm hover:italic">
+          <a href="mailto:dbbynovii@gmail.com" className="text-sm hover:italic">
             Contact
           </a>
         </nav>
@@ -208,7 +208,6 @@ function Selected() {
   const rows: Array<[string, string]> = [
     ["Paideia Educational Solutions x Google", "Brand Collateral Design"],
     ["Stronger Together", "Identity"],
-    ["Together in Harmony", "Identity"],
     ["Guru Kreator", "Social Media Design"],
     ["Little Palmerhaus", "Social Media & Ecommerce Design"],
     ["Grab Merchant", "Social Media & Ads Design"],
@@ -217,8 +216,7 @@ function Selected() {
   return (
     <section id="work" className="border-b border-foreground/20">
       <div className="mx-auto max-w-[1400px] px-6 py-16 md:px-10 md:py-24">
-        <div className="eyebrow text-foreground/60">Feature — Pages 04–47</div>
-        <h2 className="mt-4 font-serif text-5xl md:text-7xl">
+        <h2 className="font-serif text-5xl md:text-7xl">
           Selected <em>works</em>
         </h2>
 
@@ -283,31 +281,12 @@ function Colophon() {
               <em>make together?</em>
             </p>
             <a
-              href="mailto:studio@elinvaher.com"
+              href="mailto:dbbynovii@gmail.com"
               className="mt-10 inline-block font-serif text-3xl italic underline decoration-1 underline-offset-8 hover:no-underline md:text-4xl"
             >
-              studio@elinvaher.com
+              dbbynovii@gmail.com
             </a>
           </div>
-
-          <div className="md:col-span-3 md:col-start-10">
-            <div className="eyebrow text-background/60">Colophon</div>
-            <p className="mt-6 text-sm leading-relaxed text-background/80">
-              Set in Instrument Serif &amp; Work Sans. Printed on the web,
-              in Stockholm. Photography by the studio. All work © Elin
-              Vaher, 2016 — 2026.
-            </p>
-            <div className="mt-8 flex flex-col gap-2 text-sm">
-              <a href="#" className="hover:italic">Instagram</a>
-              <a href="#" className="hover:italic">Are.na</a>
-              <a href="#" className="hover:italic">LinkedIn</a>
-            </div>
-          </div>
-        </div>
-
-        <div className="mt-16 flex items-center justify-between border-t border-background/20 pt-6 text-xs text-background/60">
-          <span>Issue N°014 — Spring / Summer 2026</span>
-          <span>Printed with care</span>
         </div>
       </div>
     </footer>

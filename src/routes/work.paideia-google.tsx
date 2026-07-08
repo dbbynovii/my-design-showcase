@@ -39,7 +39,7 @@ function PaideiaGoogle() {
           <nav className="flex gap-8">
             <Link to="/" hash="work" className="text-sm hover:italic">Work</Link>
             <Link to="/" hash="about" className="text-sm hover:italic">About</Link>
-            <a href="mailto:studio@elinvaher.com" className="text-sm hover:italic">
+            <a href="mailto:dbbynovii@gmail.com" className="text-sm hover:italic">
               Contact
             </a>
           </nav>
@@ -57,7 +57,7 @@ function PaideiaGoogle() {
           </div>
         </div>
 
-        <div className="mx-auto grid max-w-[1400px] grid-cols-1 gap-12 px-6 py-16 md:grid-cols-12 md:gap-16 md:px-10 md:py-24">
+        <div className="mx-auto grid max-w-[1400px] grid-cols-1 gap-12 px-6 py-10 md:grid-cols-12 md:gap-16 md:px-10 md:py-14">
           <div className="md:col-span-7">
             <div className="eyebrow text-foreground/60">Paideia Educational Solutions</div>
             <div className="eyebrow mt-1 text-foreground/60">
@@ -107,9 +107,6 @@ function PaideiaGoogle() {
           <Link to="/" className="eyebrow hover:italic">
             ← Back to Index
           </Link>
-          <a href="mailto:studio@elinvaher.com" className="eyebrow hover:italic">
-            studio@elinvaher.com
-          </a>
         </div>
       </footer>
     </div>

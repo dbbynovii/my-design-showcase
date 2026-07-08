@@ -36,7 +36,7 @@ function StrongerTogether() {
           <nav className="flex gap-8">
             <Link to="/" hash="work" className="text-sm hover:italic">Work</Link>
             <Link to="/" hash="about" className="text-sm hover:italic">About</Link>
-            <a href="mailto:studio@elinvaher.com" className="text-sm hover:italic">
+            <a href="mailto:dbbynovii@gmail.com" className="text-sm hover:italic">
               Contact
             </a>
           </nav>
@@ -44,13 +44,15 @@ function StrongerTogether() {
       </header>
 
       {/* Top hero image: brochure stack */}
-      <section>
+      <section className="border-b border-foreground/20">
         <div className="mx-auto max-w-[1400px] px-6 pt-10 md:px-10 md:pt-14">
-          <img
-            src={brochureAsset.url}
-            alt="Stronger Together brand identity guidelines brochure stack"
-            className="h-auto w-full object-cover"
-          />
+          <div className="overflow-hidden">
+            <img
+              src={brochureAsset.url}
+              alt="Stronger Together brand identity guidelines brochure stack"
+              className="h-auto w-full object-cover"
+            />
+          </div>
         </div>
       </section>
 
@@ -137,9 +139,6 @@ function StrongerTogether() {
           <Link to="/" className="eyebrow hover:italic">
             ← Back to Index
           </Link>
-          <a href="mailto:studio@elinvaher.com" className="eyebrow hover:italic">
-            studio@elinvaher.com
-          </a>
         </div>
       </footer>
     </div>
