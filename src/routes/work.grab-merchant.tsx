@@ -48,7 +48,7 @@ function GrabMerchant() {
           <nav className="flex gap-8">
             <Link to="/" hash="work" className="text-sm hover:italic">Work</Link>
             <Link to="/" hash="about" className="text-sm hover:italic">About</Link>
-            <a href="mailto:studio@elinvaher.com" className="text-sm hover:italic">
+            <a href="mailto:dbbynovii@gmail.com" className="text-sm hover:italic">
               Contact
             </a>
           </nav>
@@ -136,9 +136,6 @@ function GrabMerchant() {
           <Link to="/" className="eyebrow hover:italic">
             ← Back to Index
           </Link>
-          <a href="mailto:studio@elinvaher.com" className="eyebrow hover:italic">
-            studio@elinvaher.com
-          </a>
         </div>
       </footer>
     </div>
