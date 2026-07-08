@@ -208,7 +208,6 @@ function Selected() {
   const rows: Array<[string, string]> = [
     ["Paideia Educational Solutions x Google", "Brand Collateral Design"],
     ["Stronger Together", "Identity"],
-    ["Together in Harmony", "Identity"],
     ["Guru Kreator", "Social Media Design"],
     ["Little Palmerhaus", "Social Media & Ecommerce Design"],
     ["Grab Merchant", "Social Media & Ads Design"],
