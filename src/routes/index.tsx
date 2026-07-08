@@ -1,6 +1,7 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { useEffect, useState } from "react";
 import useEmblaCarousel from "embla-carousel-react";
+import Autoplay from "embla-carousel-autoplay";
 import portraitAsset from "@/assets/photo_profil.png.asset.json";
 import bannerAsset from "@/assets/banner.png.asset.json";
 import kidsAsset from "@/assets/kids.png.asset.json";
@@ -49,7 +50,9 @@ function Banner() {
     { src: kidsAsset.url, alt: "Little Wear by Little Palmerhaus" },
     { src: gkAsset.url, alt: "Guru Kreator — Instagram posts" },
   ];
-  const [emblaRef, emblaApi] = useEmblaCarousel({ loop: true });
+  const [emblaRef, emblaApi] = useEmblaCarousel({ loop: true }, [
+    Autoplay({ delay: 4000, stopOnInteraction: false, stopOnMouseEnter: true }),
+  ]);
   const [selected, setSelected] = useState(0);
 
   useEffect(() => {
@@ -67,16 +70,34 @@ function Banner() {
   return (
     <section className="border-b border-foreground/20">
       <div className="mx-auto max-w-[1400px] px-6 pt-8 pb-6 md:px-10 md:pt-10">
-        <div className="overflow-hidden" ref={emblaRef}>
-          <div className="flex">
-            {slides.map((s, i) => (
-              <div key={i} className="relative min-w-0 shrink-0 grow-0 basis-full">
-                <div className="aspect-[1920/860] overflow-hidden">
-                  <img src={s.src} alt={s.alt} className="h-full w-full object-cover" />
+        <div className="flex items-center gap-3 md:gap-4">
+          <button
+            type="button"
+            aria-label="Previous slide"
+            onClick={() => emblaApi?.scrollPrev()}
+            className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full border border-foreground/30 text-foreground transition hover:bg-foreground hover:text-background md:h-12 md:w-12"
+          >
+            <span aria-hidden className="text-xl leading-none">←</span>
+          </button>
+          <div className="min-w-0 flex-1 overflow-hidden" ref={emblaRef}>
+            <div className="flex">
+              {slides.map((s, i) => (
+                <div key={i} className="relative min-w-0 shrink-0 grow-0 basis-full">
+                  <div className="aspect-[1920/860] overflow-hidden">
+                    <img src={s.src} alt={s.alt} className="h-full w-full object-cover" />
+                  </div>
                 </div>
-              </div>
-            ))}
+              ))}
+            </div>
           </div>
+          <button
+            type="button"
+            aria-label="Next slide"
+            onClick={() => emblaApi?.scrollNext()}
+            className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full border border-foreground/30 text-foreground transition hover:bg-foreground hover:text-background md:h-12 md:w-12"
+          >
+            <span aria-hidden className="text-xl leading-none">→</span>
+          </button>
         </div>
         <div className="mt-5 flex justify-center gap-2">
           {slides.map((_, i) => (
@@ -109,7 +130,7 @@ function Masthead() {
         <nav className="flex gap-8">
           <a href="#work" className="text-sm hover:italic">Work</a>
           <a href="#about" className="text-sm hover:italic">About</a>
-          <a href="mailto:dbbynovii@gmail.com" className="text-sm hover:italic">
+          <a href="#contact" className="text-sm hover:italic">
             Contact
           </a>
         </nav>
@@ -261,12 +282,11 @@ function Selected() {
 
 function Colophon() {
   return (
-    <footer className="bg-foreground text-background">
+    <footer id="contact" className="scroll-mt-16 bg-foreground text-background">
       <div className="mx-auto max-w-[1400px] px-6 py-16 md:px-10 md:py-24">
         <div className="grid grid-cols-1 gap-12 md:grid-cols-12">
           <div className="md:col-span-8">
-            <div className="eyebrow text-background/60">Back Cover</div>
-            <p className="mt-6 font-serif text-5xl leading-[1.02] md:text-8xl">
+            <p className="font-serif text-5xl leading-[1.02] md:text-8xl">
               Something to
               <br />
               <em>make together?</em>
