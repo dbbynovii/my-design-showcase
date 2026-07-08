@@ -282,12 +282,11 @@ function Selected() {
 
 function Colophon() {
   return (
-    <footer className="bg-foreground text-background">
+    <footer id="contact" className="scroll-mt-16 bg-foreground text-background">
       <div className="mx-auto max-w-[1400px] px-6 py-16 md:px-10 md:py-24">
         <div className="grid grid-cols-1 gap-12 md:grid-cols-12">
           <div className="md:col-span-8">
-            <div className="eyebrow text-background/60">Back Cover</div>
-            <p className="mt-6 font-serif text-5xl leading-[1.02] md:text-8xl">
+            <p className="font-serif text-5xl leading-[1.02] md:text-8xl">
               Something to
               <br />
               <em>make together?</em>
