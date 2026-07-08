@@ -109,7 +109,7 @@ function Masthead() {
         <nav className="flex gap-8">
           <a href="#work" className="text-sm hover:italic">Work</a>
           <a href="#about" className="text-sm hover:italic">About</a>
-          <a href="mailto:studio@elinvaher.com" className="text-sm hover:italic">
+          <a href="mailto:dbbynovii@gmail.com" className="text-sm hover:italic">
             Contact
           </a>
         </nav>
