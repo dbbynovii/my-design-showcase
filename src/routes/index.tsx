@@ -233,7 +233,9 @@ function Selected() {
                     ? "/work/guru-kreator"
                     : title === "Town Talk Polish Indonesia"
                       ? "/work/town-talk"
-                      : null;
+                      : title === "Stronger Together"
+                        ? "/work/stronger-together"
+                        : null;
             const className =
               "group grid grid-cols-[1fr_auto] items-baseline gap-4 border-b border-foreground/20 py-5 transition-colors hover:bg-foreground hover:text-background md:py-7";
             const inner = (

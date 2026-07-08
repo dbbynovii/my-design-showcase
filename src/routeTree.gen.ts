@@ -11,6 +11,7 @@
 import { Route as rootRouteImport } from './routes/__root'
 import { Route as IndexRouteImport } from './routes/index'
 import { Route as WorkTownTalkRouteImport } from './routes/work.town-talk'
+import { Route as WorkStrongerTogetherRouteImport } from './routes/work.stronger-together'
 import { Route as WorkLittlePalmerhausRouteImport } from './routes/work.little-palmerhaus'
 import { Route as WorkGuruKreatorRouteImport } from './routes/work.guru-kreator'
 import { Route as WorkGrabMerchantRouteImport } from './routes/work.grab-merchant'
@@ -23,6 +24,11 @@ const IndexRoute = IndexRouteImport.update({
 const WorkTownTalkRoute = WorkTownTalkRouteImport.update({
   id: '/work/town-talk',
   path: '/work/town-talk',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const WorkStrongerTogetherRoute = WorkStrongerTogetherRouteImport.update({
+  id: '/work/stronger-together',
+  path: '/work/stronger-together',
   getParentRoute: () => rootRouteImport,
 } as any)
 const WorkLittlePalmerhausRoute = WorkLittlePalmerhausRouteImport.update({
@@ -46,6 +52,7 @@ export interface FileRoutesByFullPath {
   '/work/grab-merchant': typeof WorkGrabMerchantRoute
   '/work/guru-kreator': typeof WorkGuruKreatorRoute
   '/work/little-palmerhaus': typeof WorkLittlePalmerhausRoute
+  '/work/stronger-together': typeof WorkStrongerTogetherRoute
   '/work/town-talk': typeof WorkTownTalkRoute
 }
 export interface FileRoutesByTo {
@@ -53,6 +60,7 @@ export interface FileRoutesByTo {
   '/work/grab-merchant': typeof WorkGrabMerchantRoute
   '/work/guru-kreator': typeof WorkGuruKreatorRoute
   '/work/little-palmerhaus': typeof WorkLittlePalmerhausRoute
+  '/work/stronger-together': typeof WorkStrongerTogetherRoute
   '/work/town-talk': typeof WorkTownTalkRoute
 }
 export interface FileRoutesById {
@@ -61,6 +69,7 @@ export interface FileRoutesById {
   '/work/grab-merchant': typeof WorkGrabMerchantRoute
   '/work/guru-kreator': typeof WorkGuruKreatorRoute
   '/work/little-palmerhaus': typeof WorkLittlePalmerhausRoute
+  '/work/stronger-together': typeof WorkStrongerTogetherRoute
   '/work/town-talk': typeof WorkTownTalkRoute
 }
 export interface FileRouteTypes {
@@ -70,6 +79,7 @@ export interface FileRouteTypes {
     | '/work/grab-merchant'
     | '/work/guru-kreator'
     | '/work/little-palmerhaus'
+    | '/work/stronger-together'
     | '/work/town-talk'
   fileRoutesByTo: FileRoutesByTo
   to:
@@ -77,6 +87,7 @@ export interface FileRouteTypes {
     | '/work/grab-merchant'
     | '/work/guru-kreator'
     | '/work/little-palmerhaus'
+    | '/work/stronger-together'
     | '/work/town-talk'
   id:
     | '__root__'
@@ -84,6 +95,7 @@ export interface FileRouteTypes {
     | '/work/grab-merchant'
     | '/work/guru-kreator'
     | '/work/little-palmerhaus'
+    | '/work/stronger-together'
     | '/work/town-talk'
   fileRoutesById: FileRoutesById
 }
@@ -92,6 +104,7 @@ export interface RootRouteChildren {
   WorkGrabMerchantRoute: typeof WorkGrabMerchantRoute
   WorkGuruKreatorRoute: typeof WorkGuruKreatorRoute
   WorkLittlePalmerhausRoute: typeof WorkLittlePalmerhausRoute
+  WorkStrongerTogetherRoute: typeof WorkStrongerTogetherRoute
   WorkTownTalkRoute: typeof WorkTownTalkRoute
 }
 
@@ -109,6 +122,13 @@ declare module '@tanstack/react-router' {
       path: '/work/town-talk'
       fullPath: '/work/town-talk'
       preLoaderRoute: typeof WorkTownTalkRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/work/stronger-together': {
+      id: '/work/stronger-together'
+      path: '/work/stronger-together'
+      fullPath: '/work/stronger-together'
+      preLoaderRoute: typeof WorkStrongerTogetherRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/work/little-palmerhaus': {
@@ -140,6 +160,7 @@ const rootRouteChildren: RootRouteChildren = {
   WorkGrabMerchantRoute: WorkGrabMerchantRoute,
   WorkGuruKreatorRoute: WorkGuruKreatorRoute,
   WorkLittlePalmerhausRoute: WorkLittlePalmerhausRoute,
+  WorkStrongerTogetherRoute: WorkStrongerTogetherRoute,
   WorkTownTalkRoute: WorkTownTalkRoute,
 }
 export const routeTree = rootRouteImport
