@@ -1,6 +1,7 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { useEffect, useState } from "react";
 import useEmblaCarousel from "embla-carousel-react";
+import Autoplay from "embla-carousel-autoplay";
 import portraitAsset from "@/assets/photo_profil.png.asset.json";
 import bannerAsset from "@/assets/banner.png.asset.json";
 import kidsAsset from "@/assets/kids.png.asset.json";
