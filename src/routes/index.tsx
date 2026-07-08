@@ -180,16 +180,7 @@ function Hero() {
 }
 
 function Marquee() {
-  const items = [
-    "Identity",
-    "Editorial",
-    "Art Direction",
-    "Typography",
-    "Print",
-    "Exhibition",
-    "Packaging",
-    "Web",
-  ];
+  const items = ["Graphic Designer"];
   return (
     <div className="overflow-hidden border-b border-foreground/20 py-6">
       <div className="marquee-track flex whitespace-nowrap font-serif text-5xl italic md:text-7xl">
