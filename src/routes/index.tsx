@@ -216,8 +216,7 @@ function Selected() {
   return (
     <section id="work" className="border-b border-foreground/20">
       <div className="mx-auto max-w-[1400px] px-6 py-16 md:px-10 md:py-24">
-        <div className="eyebrow text-foreground/60">Feature — Pages 04–47</div>
-        <h2 className="mt-4 font-serif text-5xl md:text-7xl">
+        <h2 className="font-serif text-5xl md:text-7xl">
           Selected <em>works</em>
         </h2>
 
