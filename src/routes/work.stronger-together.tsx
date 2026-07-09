@@ -57,25 +57,21 @@ function StrongerTogether() {
       {/* Brand Identity intro */}
       <section>
         <div className="mx-auto max-w-[1400px] px-6 py-16 md:px-10 md:py-24">
-          <div className="grid grid-cols-1 gap-8 md:grid-cols-12 md:gap-12">
-            <div className="md:col-span-5">
-              <div className="eyebrow text-foreground/60">Stronger Together</div>
-              <h1 className="mt-4 font-serif text-5xl leading-[1.05] md:text-7xl">
-                Brand <em>Identity</em>
-              </h1>
-            </div>
-            <div className="md:col-span-7 space-y-5 text-lg leading-relaxed">
-              <p>
-                Stronger Together is the 2025–2026 academic year theme in Amman Academy school.<br className="hidden md:inline" />
-                This academic year calls students into a new chapter of deeper unity, intentional growth,<br className="hidden md:inline" />
-                and shared purpose. The theme “Stronger Together” is a reminder that lasting transformation<br className="hidden md:inline" />
-                is built — not in isolation — but in community.<br className="hidden md:inline" />
-                With clarity of purpose and intentional actions, we begin to identify the pillars we must strengthen together:<br className="hidden md:inline" />
-                our values, our systems, our culture, and our relationships.<br className="hidden md:inline" />
-                Once these are clearly defined and shared, we can build a strong foundation and together.<br className="hidden md:inline" />
-                In every challenge, every achievement, every step forward, we remain Stronger Together.
-              </p>
-            </div>
+          <div className="eyebrow text-foreground/60">Stronger Together</div>
+          <h1 className="mt-4 font-serif text-5xl leading-[1.05] md:text-7xl">
+            Brand <em>Identity</em>
+          </h1>
+          <div className="mt-12 md:mt-16 text-lg leading-relaxed">
+            <p>
+              Stronger Together is the 2025–2026 academic year theme in Amman Academy school.<br className="hidden md:inline" />
+              This academic year calls students into a new chapter of deeper unity, intentional growth,<br className="hidden md:inline" />
+              and shared purpose. The theme “Stronger Together” is a reminder that lasting transformation<br className="hidden md:inline" />
+              is built — not in isolation — but in community.<br className="hidden md:inline" />
+              With clarity of purpose and intentional actions, we begin to identify the pillars we must strengthen together:<br className="hidden md:inline" />
+              our values, our systems, our culture, and our relationships.<br className="hidden md:inline" />
+              Once these are clearly defined and shared, we can build a strong foundation and together.<br className="hidden md:inline" />
+              In every challenge, every achievement, every step forward, we remain Stronger Together.
+            </p>
           </div>
         </div>
       </section>
