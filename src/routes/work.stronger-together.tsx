@@ -79,28 +79,24 @@ function StrongerTogether() {
       {/* Concept / Design */}
       <section className="border-t border-foreground/15">
         <div className="mx-auto max-w-[1400px] px-6 py-16 md:px-10 md:py-24">
-          <div className="grid grid-cols-1 gap-8 md:grid-cols-12 md:gap-12">
-            <div className="md:col-span-5">
-              <div className="eyebrow text-foreground/60">Concept</div>
-              <h2 className="mt-4 font-serif text-5xl leading-[1.05] md:text-7xl">
-                <em>Design</em>
-              </h2>
-            </div>
-            <div className="md:col-span-7 space-y-5 text-lg leading-relaxed">
-              <p>
-                The logo showcases four interlocking hands, symbolizing unity and collaboration.
-              </p>
-              <p>
-                Each hand represents one of the four pillars of transformation we’ve been cultivating since January 2025:<br className="hidden md:inline" />
-                Strategic and Operational Management, Academic Management, Non-academic Management,<br className="hidden md:inline" />
-                and Financial &amp; Regulatory Compliance.
-              </p>
-              <p>
-                Just as these hands are intricately united, achieving these goals demands a collective effort,<br className="hidden md:inline" />
-                advancing together, hand in hand. This logo stands as a profound reminder that true transformation<br className="hidden md:inline" />
-                can only be realized when individuals come together, united by a common purpose and shared vision.
-              </p>
-            </div>
+          <div className="eyebrow text-foreground/60">Concept</div>
+          <h2 className="mt-4 font-serif text-5xl leading-[1.05] md:text-7xl">
+            <em>Design</em>
+          </h2>
+          <div className="mt-12 md:mt-16 space-y-5 text-lg leading-relaxed">
+            <p>
+              The logo showcases four interlocking hands, symbolizing unity and collaboration.
+            </p>
+            <p>
+              Each hand represents one of the four pillars of transformation we’ve been cultivating since January 2025:<br className="hidden md:inline" />
+              Strategic and Operational Management, Academic Management, Non-academic Management,<br className="hidden md:inline" />
+              and Financial &amp; Regulatory Compliance.
+            </p>
+            <p>
+              Just as these hands are intricately united, achieving these goals demands a collective effort,<br className="hidden md:inline" />
+              advancing together, hand in hand. This logo stands as a profound reminder that true transformation<br className="hidden md:inline" />
+              can only be realized when individuals come together, united by a common purpose and shared vision.
+            </p>
           </div>
         </div>
       </section>
