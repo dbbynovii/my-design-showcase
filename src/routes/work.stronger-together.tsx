@@ -42,8 +42,8 @@ function StrongerTogether() {
       </header>
 
       {/* Top hero image: brochure stack */}
-      <section className="border-b border-foreground/20">
-        <div className="mx-auto max-w-[1400px] px-6 pt-10 md:px-10 md:pt-14">
+      <section>
+        <div className="mx-auto max-w-[1400px] px-6 pt-12 md:px-10 md:pt-[68px]">
           <div className="overflow-hidden">
             <img
               src={brochureAsset.url}
