@@ -64,8 +64,8 @@ function GrabMerchant() {
           </div>
         </div>
 
-        <div className="mx-auto grid max-w-[1400px] grid-cols-1 gap-12 px-6 py-16 md:grid-cols-12 md:gap-16 md:px-10 md:py-24">
-          <div className="md:col-span-5">
+        <div className="mx-auto max-w-[1400px] px-6 py-16 md:px-10 md:py-24">
+          <div>
             <div className="eyebrow text-foreground/60">Grab Merchant</div>
             <div className="eyebrow mt-1 text-foreground/60">
               Agency: Indonesia Media Advertising
@@ -76,7 +76,7 @@ function GrabMerchant() {
               <em>E-commerce Design</em>
             </h1>
           </div>
-          <div className="md:col-span-7">
+          <div className="mt-12 md:mt-16">
             <p className="text-lg leading-relaxed">
               Indonesia Media Advertising is one of Indonesia's leading advertising agencies.<br className="hidden md:inline" />
               Since its establishment in 2009 in Jakarta, the agency has been delivering creative solutions<br className="hidden md:inline" />
