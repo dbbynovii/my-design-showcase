@@ -78,14 +78,12 @@ function GrabMerchant() {
           </div>
           <div className="md:col-span-5">
             <p className="text-lg leading-relaxed">
-              Indonesia Media Advertising is one of Indonesia's leading
-              advertising agencies. Since its establishment in 2009 in Jakarta,
-              the agency has been delivering creative solutions tailored to the
-              Indonesian market. My responsibilities consist of designed visual
-              content for Grab Merchant's social media channels, created a
-              diverse range of visual assets including e-commerce banners,
-              Instagram feed posts, and Instagram stories, to drive merchant
-              engagement and campaign goals.
+              Indonesia Media Advertising is one of Indonesia's leading advertising agencies.<br className="hidden md:inline" />
+              Since its establishment in 2009 in Jakarta, the agency has been delivering creative solutions<br className="hidden md:inline" />
+              tailored to the Indonesian market.<br className="hidden md:inline" />
+              My responsibilities consist of designed visual content for Grab Merchant's social media channels,<br className="hidden md:inline" />
+              created a diverse range of visual assets including e-commerce banners, Instagram feed posts,<br className="hidden md:inline" />
+              and Instagram stories, to drive merchant engagement and campaign goals.
             </p>
           </div>
         </div>

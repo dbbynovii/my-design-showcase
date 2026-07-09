@@ -80,14 +80,13 @@ function LittlePalmerhaus() {
           </div>
           <div className="md:col-span-5">
             <p className="text-lg leading-relaxed">
-              Little Palmerhaus is one of the prominent baby clothing brands in
-              Indonesia. My responsibility consists of conceptualizing and
-              producing key visual assets for major e-commerce marketing
-              campaigns, managing end-to-end post-production for product
-              catalogues — including photo editing, color correction, and
-              retouching to meet brand standards — as well as supporting
-              photography on set, ensuring a seamless workflow from shoot to
-              final asset delivery.
+              Little Palmerhaus is one of the prominent baby clothing brands in Indonesia.<br className="hidden md:inline" />
+              My responsibility consists of conceptualizing and producing key visual assets<br className="hidden md:inline" />
+              for major e-commerce marketing campaigns,<br className="hidden md:inline" />
+              managing end-to-end post-production for product catalogues,<br className="hidden md:inline" />
+              including photo editing, color correction, and retouching to meet brand standards<br className="hidden md:inline" />
+              as well as supporting photography on set, ensuring a seamless workflow<br className="hidden md:inline" />
+              from shoot to final asset delivery.
             </p>
           </div>
         </div>

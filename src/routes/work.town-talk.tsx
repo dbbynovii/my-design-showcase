@@ -83,14 +83,12 @@ function TownTalk() {
           </div>
           <div className="md:col-span-5">
             <p className="text-lg leading-relaxed">
-              PT Levantier Indonesia is the authorized distributor of Town Talk
-              Polish in Indonesia. My responsibilities include planning social
-              media content for Town Talk Polish Indonesia, undertake photo
-              editing, retouching, and digital imaging to produce visual
-              content, created basic GIFs and motion graphics to increase
-              audience engagement across digital platforms and also
-              collaborated with team to develop creative concepts and maintain
-              consistent brand identity.
+              PT Levantier Indonesia is the authorized distributor of Town Talk Polish in Indonesia.<br className="hidden md:inline" />
+              My responsibilities include planning social media content for Town Talk Polish Indonesia,<br className="hidden md:inline" />
+              undertake photo editing, retouching, and digital imaging to produce visual content,<br className="hidden md:inline" />
+              created basic GIFs and motion graphics to increase audience engagement<br className="hidden md:inline" />
+              across digital platforms and also collaborated with team to develop creative concepts<br className="hidden md:inline" />
+              and maintain consistent brand identity.
             </p>
           </div>
         </div>

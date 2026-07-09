@@ -66,22 +66,14 @@ function StrongerTogether() {
             </div>
             <div className="md:col-span-7 space-y-5 text-lg leading-relaxed">
               <p>
-                Stronger Together is the 2025–2026 academic year theme in Amman
-                Academy school. This academic year calls students into a new
-                chapter of deeper unity, intentional growth, and shared purpose.
-                The theme “Stronger Together” is a reminder that lasting
-                transformation is built — not in isolation — but in community.
-              </p>
-              <p>
-                With clarity of purpose and intentional actions, we begin to
-                identify the pillars we must strengthen together: our values,
-                our systems, our culture, and our relationships. Once these are
-                clearly defined and shared, we can build a strong foundation
-                and — together.
-              </p>
-              <p>
-                In every challenge, every achievement, every step forward, we
-                remain Stronger Together.
+                Stronger Together is the 2025–2026 academic year theme in Amman Academy school.<br className="hidden md:inline" />
+                This academic year calls students into a new chapter of deeper unity, intentional growth,<br className="hidden md:inline" />
+                and shared purpose. The theme “Stronger Together” is a reminder that lasting transformation<br className="hidden md:inline" />
+                is built — not in isolation — but in community.<br className="hidden md:inline" />
+                With clarity of purpose and intentional actions, we begin to identify the pillars we must strengthen together:<br className="hidden md:inline" />
+                our values, our systems, our culture, and our relationships.<br className="hidden md:inline" />
+                Once these are clearly defined and shared, we can build a strong foundation and together.<br className="hidden md:inline" />
+                In every challenge, every achievement, every step forward, we remain Stronger Together.
               </p>
             </div>
           </div>
@@ -100,21 +92,17 @@ function StrongerTogether() {
             </div>
             <div className="md:col-span-7 space-y-5 text-lg leading-relaxed">
               <p>
-                The logo showcases four interlocking hands, symbolizing unity
-                and collaboration.
+                The logo showcases four interlocking hands, symbolizing unity and collaboration.
               </p>
               <p>
-                Each hand represents one of the four pillars of transformation
-                we’ve been cultivating since January 2025: Strategic and
-                Operational Management, Academic Management, Non-academic
-                Management, and Financial &amp; Regulatory Compliance.
+                Each hand represents one of the four pillars of transformation we’ve been cultivating since January 2025:<br className="hidden md:inline" />
+                Strategic and Operational Management, Academic Management, Non-academic Management,<br className="hidden md:inline" />
+                and Financial &amp; Regulatory Compliance.
               </p>
               <p>
-                Just as these hands are intricately united, achieving these
-                goals demands a collective effort—advancing together, hand in
-                hand. This logo stands as a profound reminder that true
-                transformation can only be realized when individuals come
-                together, united by a common purpose and shared vision.
+                Just as these hands are intricately united, achieving these goals demands a collective effort,<br className="hidden md:inline" />
+                advancing together, hand in hand. This logo stands as a profound reminder that true transformation<br className="hidden md:inline" />
+                can only be realized when individuals come together, united by a common purpose and shared vision.
               </p>
             </div>
           </div>
