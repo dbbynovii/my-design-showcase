@@ -62,14 +62,14 @@ function GuruKreator() {
           </div>
         </div>
 
-        <div className="mx-auto grid max-w-[1400px] grid-cols-1 gap-6 px-6 py-16 md:grid-cols-12 md:gap-8 md:px-10 md:py-24">
-          <div className="md:col-span-6">
+        <div className="mx-auto max-w-[1400px] px-6 py-16 md:px-10 md:py-24">
+          <div>
             <div className="eyebrow text-foreground/60">Guru Kreator</div>
             <h1 className="mt-4 font-serif text-5xl leading-[1.05] md:text-7xl">
               <em>Social Media</em>
             </h1>
           </div>
-          <div className="md:col-span-6">
+          <div className="mt-12 md:mt-16">
             <p className="text-lg leading-relaxed">
               Guru Kreator is an Indonesian-based Learning Management System (LMS) platform focused on<br className="hidden md:inline" />
               empowering educators, and students to create and deliver interactive and personalized learning experiences.<br className="hidden md:inline" />
