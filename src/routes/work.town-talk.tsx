@@ -68,7 +68,7 @@ function TownTalk() {
         </div>
 
         <div className="mx-auto grid max-w-[1400px] grid-cols-1 gap-12 px-6 py-16 md:grid-cols-12 md:gap-16 md:px-10 md:py-24">
-          <div className="md:col-span-7">
+          <div className="md:col-span-5">
             <div className="eyebrow text-foreground/60">Town Talk Polish Indonesia</div>
             <div className="eyebrow mt-1 text-foreground/60">
               PT Levantier Indonesia
@@ -81,7 +81,7 @@ function TownTalk() {
               Indonesia
             </h1>
           </div>
-          <div className="md:col-span-5">
+          <div className="md:col-span-7">
             <p className="text-lg leading-relaxed">
               PT Levantier Indonesia is the authorized distributor of Town Talk Polish in Indonesia.<br className="hidden md:inline" />
               My responsibilities include planning social media content for Town Talk Polish Indonesia,<br className="hidden md:inline" />
