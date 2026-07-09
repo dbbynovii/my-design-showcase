@@ -43,12 +43,12 @@ function StrongerTogether() {
 
       {/* Top hero image: brochure stack */}
       <section>
-        <div className="mx-auto max-w-[1400px] px-6 pt-[5px] md:px-10 md:pt-[8px]">
+        <div className="mx-auto max-w-[1400px] px-6 md:px-10">
           <div className="overflow-hidden">
             <img
               src={brochureAsset.url}
               alt="Stronger Together brand identity guidelines brochure stack"
-              className="h-auto w-full object-cover"
+              className="h-auto w-full object-cover -mt-[12%] md:-mt-[18%]"
             />
           </div>
         </div>
