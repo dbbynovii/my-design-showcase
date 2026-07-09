@@ -71,14 +71,11 @@ function GuruKreator() {
           </div>
           <div className="md:col-span-6">
             <p className="text-lg leading-relaxed">
-              Guru Kreator is an Indonesian-based Learning Management System
-              (LMS) platform focused on empowering educators, and students to
-              create and deliver interactive and personalized learning
-              experiences. My role involves developing and maintaining the
-              visual identity for Guru Kreator across all social media,
-              including contents planning to boost engagement and creating
-              collateral design that support broad company objectives and
-              internal needs.
+              Guru Kreator is an Indonesian-based Learning Management System (LMS) platform focused on<br className="hidden md:inline" />
+              empowering educators, and students to create and deliver interactive and personalized learning experiences.<br className="hidden md:inline" />
+              My role involves developing and maintaining the visual identity for Guru Kreator across all social media,<br className="hidden md:inline" />
+              including contents planning to boost engagement and creating collateral design<br className="hidden md:inline" />
+              that support broad company objectives and internal needs.
             </p>
           </div>
         </div>

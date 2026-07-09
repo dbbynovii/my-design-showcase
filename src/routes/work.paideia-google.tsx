@@ -79,8 +79,7 @@ function PaideiaGoogle() {
             <p className="mt-6 text-lg leading-relaxed">
               As a member of the design team, I contributed to the development
               of a wide range of visual assets that supported brand
-              communication, digital marketing campaigns, and educational
-              initiatives reaching teachers and schools across Indonesia.
+              communication, and digital marketing campaigns.
             </p>
           </div>
         </div>
