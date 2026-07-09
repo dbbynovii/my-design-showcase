@@ -48,7 +48,7 @@ function StrongerTogether() {
             <img
               src={brochureAsset.url}
               alt="Stronger Together brand identity guidelines brochure stack"
-              className="h-auto w-full object-cover -mt-[12%] md:-mt-[18%]"
+              className="h-auto w-full object-cover -mt-[8.4%] md:-mt-[12.6%]"
             />
           </div>
         </div>
