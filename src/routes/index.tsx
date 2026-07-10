@@ -172,10 +172,13 @@ function Hero() {
 
           <div className="mt-10">
             <a
-              href="#"
+              href={cvAsset.url}
+              download="Debora_Novianti_CV.pdf"
+              target="_blank"
+              rel="noopener noreferrer"
               className="inline-flex items-center gap-2 border border-foreground bg-foreground px-6 py-3 text-sm text-background transition-colors hover:bg-background hover:text-foreground"
             >
-              Download My Resume
+              Download My CV
               <span aria-hidden>↓</span>
             </a>
           </div>
