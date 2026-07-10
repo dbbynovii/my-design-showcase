@@ -6,6 +6,7 @@ import portraitAsset from "@/assets/photo_profil.png.asset.json";
 import bannerAsset from "@/assets/banner.png.asset.json";
 import kidsAsset from "@/assets/kids.png.asset.json";
 import gkAsset from "@/assets/gk.png.asset.json";
+import cvAsset from "@/assets/Debora_Novianti_CV.pdf.asset.json";
 
 export const Route = createFileRoute("/")({
   head: () => ({
