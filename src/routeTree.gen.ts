@@ -14,6 +14,7 @@ import { Route as WorkTownTalkRouteImport } from './routes/work.town-talk'
 import { Route as WorkStrongerTogetherRouteImport } from './routes/work.stronger-together'
 import { Route as WorkPaideiaGoogleRouteImport } from './routes/work.paideia-google'
 import { Route as WorkLittlePalmerhausRouteImport } from './routes/work.little-palmerhaus'
+import { Route as WorkLearnGraphicDesignerRouteImport } from './routes/work.learn-graphic-designer'
 import { Route as WorkGuruKreatorRouteImport } from './routes/work.guru-kreator'
 import { Route as WorkGrabMerchantRouteImport } from './routes/work.grab-merchant'
 
@@ -42,6 +43,12 @@ const WorkLittlePalmerhausRoute = WorkLittlePalmerhausRouteImport.update({
   path: '/work/little-palmerhaus',
   getParentRoute: () => rootRouteImport,
 } as any)
+const WorkLearnGraphicDesignerRoute =
+  WorkLearnGraphicDesignerRouteImport.update({
+    id: '/work/learn-graphic-designer',
+    path: '/work/learn-graphic-designer',
+    getParentRoute: () => rootRouteImport,
+  } as any)
 const WorkGuruKreatorRoute = WorkGuruKreatorRouteImport.update({
   id: '/work/guru-kreator',
   path: '/work/guru-kreator',
@@ -57,6 +64,7 @@ export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
   '/work/grab-merchant': typeof WorkGrabMerchantRoute
   '/work/guru-kreator': typeof WorkGuruKreatorRoute
+  '/work/learn-graphic-designer': typeof WorkLearnGraphicDesignerRoute
   '/work/little-palmerhaus': typeof WorkLittlePalmerhausRoute
   '/work/paideia-google': typeof WorkPaideiaGoogleRoute
   '/work/stronger-together': typeof WorkStrongerTogetherRoute
@@ -66,6 +74,7 @@ export interface FileRoutesByTo {
   '/': typeof IndexRoute
   '/work/grab-merchant': typeof WorkGrabMerchantRoute
   '/work/guru-kreator': typeof WorkGuruKreatorRoute
+  '/work/learn-graphic-designer': typeof WorkLearnGraphicDesignerRoute
   '/work/little-palmerhaus': typeof WorkLittlePalmerhausRoute
   '/work/paideia-google': typeof WorkPaideiaGoogleRoute
   '/work/stronger-together': typeof WorkStrongerTogetherRoute
@@ -76,6 +85,7 @@ export interface FileRoutesById {
   '/': typeof IndexRoute
   '/work/grab-merchant': typeof WorkGrabMerchantRoute
   '/work/guru-kreator': typeof WorkGuruKreatorRoute
+  '/work/learn-graphic-designer': typeof WorkLearnGraphicDesignerRoute
   '/work/little-palmerhaus': typeof WorkLittlePalmerhausRoute
   '/work/paideia-google': typeof WorkPaideiaGoogleRoute
   '/work/stronger-together': typeof WorkStrongerTogetherRoute
@@ -87,6 +97,7 @@ export interface FileRouteTypes {
     | '/'
     | '/work/grab-merchant'
     | '/work/guru-kreator'
+    | '/work/learn-graphic-designer'
     | '/work/little-palmerhaus'
     | '/work/paideia-google'
     | '/work/stronger-together'
@@ -96,6 +107,7 @@ export interface FileRouteTypes {
     | '/'
     | '/work/grab-merchant'
     | '/work/guru-kreator'
+    | '/work/learn-graphic-designer'
     | '/work/little-palmerhaus'
     | '/work/paideia-google'
     | '/work/stronger-together'
@@ -105,6 +117,7 @@ export interface FileRouteTypes {
     | '/'
     | '/work/grab-merchant'
     | '/work/guru-kreator'
+    | '/work/learn-graphic-designer'
     | '/work/little-palmerhaus'
     | '/work/paideia-google'
     | '/work/stronger-together'
@@ -115,6 +128,7 @@ export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
   WorkGrabMerchantRoute: typeof WorkGrabMerchantRoute
   WorkGuruKreatorRoute: typeof WorkGuruKreatorRoute
+  WorkLearnGraphicDesignerRoute: typeof WorkLearnGraphicDesignerRoute
   WorkLittlePalmerhausRoute: typeof WorkLittlePalmerhausRoute
   WorkPaideiaGoogleRoute: typeof WorkPaideiaGoogleRoute
   WorkStrongerTogetherRoute: typeof WorkStrongerTogetherRoute
@@ -158,6 +172,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof WorkLittlePalmerhausRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/work/learn-graphic-designer': {
+      id: '/work/learn-graphic-designer'
+      path: '/work/learn-graphic-designer'
+      fullPath: '/work/learn-graphic-designer'
+      preLoaderRoute: typeof WorkLearnGraphicDesignerRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/work/guru-kreator': {
       id: '/work/guru-kreator'
       path: '/work/guru-kreator'
@@ -179,6 +200,7 @@ const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
   WorkGrabMerchantRoute: WorkGrabMerchantRoute,
   WorkGuruKreatorRoute: WorkGuruKreatorRoute,
+  WorkLearnGraphicDesignerRoute: WorkLearnGraphicDesignerRoute,
   WorkLittlePalmerhausRoute: WorkLittlePalmerhausRoute,
   WorkPaideiaGoogleRoute: WorkPaideiaGoogleRoute,
   WorkStrongerTogetherRoute: WorkStrongerTogetherRoute,
