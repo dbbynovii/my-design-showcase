@@ -212,6 +212,7 @@ function Selected() {
     ["Little Palmerhaus", "Social Media & Ecommerce Design"],
     ["Grab Merchant", "Social Media & Ads Design"],
     ["Town Talk Polish Indonesia", "Social Media Design"],
+    ["Learn about Graphic Designer", "Editorial Design"],
   ];
   return (
     <section id="work" className="border-b border-foreground/20">
