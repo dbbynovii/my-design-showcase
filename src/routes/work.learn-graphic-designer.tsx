@@ -5,6 +5,9 @@ import Autoplay from "embla-carousel-autoplay";
 import mainAsset from "@/assets/lag-main.png.asset.json";
 import lag2 from "@/assets/lag-2.png.asset.json";
 import lag3 from "@/assets/lag-3.png.asset.json";
+import lag4 from "@/assets/lag-4.png.asset.json";
+import lag5 from "@/assets/lag-5.png.asset.json";
+import lag6 from "@/assets/lag-6.png.asset.json";
 
 export const Route = createFileRoute("/work/learn-graphic-designer")({
   head: () => ({
