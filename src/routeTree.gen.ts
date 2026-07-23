@@ -13,6 +13,7 @@ import { Route as IndexRouteImport } from './routes/index'
 import { Route as WorkTownTalkRouteImport } from './routes/work.town-talk'
 import { Route as WorkStrongerTogetherRouteImport } from './routes/work.stronger-together'
 import { Route as WorkPaideiaGoogleRouteImport } from './routes/work.paideia-google'
+import { Route as WorkMotionGraphicRouteImport } from './routes/work.motion-graphic'
 import { Route as WorkLittlePalmerhausRouteImport } from './routes/work.little-palmerhaus'
 import { Route as WorkLearnGraphicDesignerRouteImport } from './routes/work.learn-graphic-designer'
 import { Route as WorkGuruKreatorRouteImport } from './routes/work.guru-kreator'
@@ -37,6 +38,11 @@ const WorkStrongerTogetherRoute = WorkStrongerTogetherRouteImport.update({
 const WorkPaideiaGoogleRoute = WorkPaideiaGoogleRouteImport.update({
   id: '/work/paideia-google',
   path: '/work/paideia-google',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const WorkMotionGraphicRoute = WorkMotionGraphicRouteImport.update({
+  id: '/work/motion-graphic',
+  path: '/work/motion-graphic',
   getParentRoute: () => rootRouteImport,
 } as any)
 const WorkLittlePalmerhausRoute = WorkLittlePalmerhausRouteImport.update({
@@ -73,6 +79,7 @@ export interface FileRoutesByFullPath {
   '/work/guru-kreator': typeof WorkGuruKreatorRoute
   '/work/learn-graphic-designer': typeof WorkLearnGraphicDesignerRoute
   '/work/little-palmerhaus': typeof WorkLittlePalmerhausRoute
+  '/work/motion-graphic': typeof WorkMotionGraphicRoute
   '/work/paideia-google': typeof WorkPaideiaGoogleRoute
   '/work/stronger-together': typeof WorkStrongerTogetherRoute
   '/work/town-talk': typeof WorkTownTalkRoute
@@ -84,6 +91,7 @@ export interface FileRoutesByTo {
   '/work/guru-kreator': typeof WorkGuruKreatorRoute
   '/work/learn-graphic-designer': typeof WorkLearnGraphicDesignerRoute
   '/work/little-palmerhaus': typeof WorkLittlePalmerhausRoute
+  '/work/motion-graphic': typeof WorkMotionGraphicRoute
   '/work/paideia-google': typeof WorkPaideiaGoogleRoute
   '/work/stronger-together': typeof WorkStrongerTogetherRoute
   '/work/town-talk': typeof WorkTownTalkRoute
@@ -96,6 +104,7 @@ export interface FileRoutesById {
   '/work/guru-kreator': typeof WorkGuruKreatorRoute
   '/work/learn-graphic-designer': typeof WorkLearnGraphicDesignerRoute
   '/work/little-palmerhaus': typeof WorkLittlePalmerhausRoute
+  '/work/motion-graphic': typeof WorkMotionGraphicRoute
   '/work/paideia-google': typeof WorkPaideiaGoogleRoute
   '/work/stronger-together': typeof WorkStrongerTogetherRoute
   '/work/town-talk': typeof WorkTownTalkRoute
@@ -109,6 +118,7 @@ export interface FileRouteTypes {
     | '/work/guru-kreator'
     | '/work/learn-graphic-designer'
     | '/work/little-palmerhaus'
+    | '/work/motion-graphic'
     | '/work/paideia-google'
     | '/work/stronger-together'
     | '/work/town-talk'
@@ -120,6 +130,7 @@ export interface FileRouteTypes {
     | '/work/guru-kreator'
     | '/work/learn-graphic-designer'
     | '/work/little-palmerhaus'
+    | '/work/motion-graphic'
     | '/work/paideia-google'
     | '/work/stronger-together'
     | '/work/town-talk'
@@ -131,6 +142,7 @@ export interface FileRouteTypes {
     | '/work/guru-kreator'
     | '/work/learn-graphic-designer'
     | '/work/little-palmerhaus'
+    | '/work/motion-graphic'
     | '/work/paideia-google'
     | '/work/stronger-together'
     | '/work/town-talk'
@@ -143,6 +155,7 @@ export interface RootRouteChildren {
   WorkGuruKreatorRoute: typeof WorkGuruKreatorRoute
   WorkLearnGraphicDesignerRoute: typeof WorkLearnGraphicDesignerRoute
   WorkLittlePalmerhausRoute: typeof WorkLittlePalmerhausRoute
+  WorkMotionGraphicRoute: typeof WorkMotionGraphicRoute
   WorkPaideiaGoogleRoute: typeof WorkPaideiaGoogleRoute
   WorkStrongerTogetherRoute: typeof WorkStrongerTogetherRoute
   WorkTownTalkRoute: typeof WorkTownTalkRoute
@@ -176,6 +189,13 @@ declare module '@tanstack/react-router' {
       path: '/work/paideia-google'
       fullPath: '/work/paideia-google'
       preLoaderRoute: typeof WorkPaideiaGoogleRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/work/motion-graphic': {
+      id: '/work/motion-graphic'
+      path: '/work/motion-graphic'
+      fullPath: '/work/motion-graphic'
+      preLoaderRoute: typeof WorkMotionGraphicRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/work/little-palmerhaus': {
@@ -223,6 +243,7 @@ const rootRouteChildren: RootRouteChildren = {
   WorkGuruKreatorRoute: WorkGuruKreatorRoute,
   WorkLearnGraphicDesignerRoute: WorkLearnGraphicDesignerRoute,
   WorkLittlePalmerhausRoute: WorkLittlePalmerhausRoute,
+  WorkMotionGraphicRoute: WorkMotionGraphicRoute,
   WorkPaideiaGoogleRoute: WorkPaideiaGoogleRoute,
   WorkStrongerTogetherRoute: WorkStrongerTogetherRoute,
   WorkTownTalkRoute: WorkTownTalkRoute,

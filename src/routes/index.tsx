@@ -218,6 +218,7 @@ function Selected() {
     ["Town Talk Polish Indonesia", "Social Media Design"],
     ["Learn about Graphic Designer", "Illustration Book"],
     ["Coding For Kids", "Illustration Book"],
+    ["ME — Taylor Swift", "Motion Graphic"],
   ];
   return (
     <section id="work" className="border-b border-foreground/20">
@@ -245,7 +246,9 @@ function Selected() {
                             ? "/work/learn-graphic-designer"
                             : title === "Coding For Kids"
                               ? "/work/coding-for-kids"
-                              : null;
+                              : title === "ME — Taylor Swift"
+                                ? "/work/motion-graphic"
+                                : null;
             const className =
               "group grid grid-cols-[1fr_auto] items-baseline gap-4 border-b border-foreground/20 py-5 transition-colors hover:bg-foreground hover:text-background md:py-7";
             const inner = (
