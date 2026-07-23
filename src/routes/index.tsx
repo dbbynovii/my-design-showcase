@@ -242,11 +242,11 @@ function Selected() {
                         ? "/work/stronger-together"
                         : title === "Paideia Educational Solutions x Google"
                           ? "/work/paideia-google"
-                            : title === "Learn about Graphic Designer"
+                            : title === "Learn about Graphic Design"
                             ? "/work/learn-graphic-designer"
-                            : title === "Coding For Kids"
+                            : title === "Coding for Kids"
                               ? "/work/coding-for-kids"
-                              : title === "Me - Taylor Swift (Motion Graphics Remake)"
+                              : title === "Me - Taylor Swift (Motion Graphic Remake)"
                                 ? "/work/motion-graphic"
                                 : null;
             const className =
