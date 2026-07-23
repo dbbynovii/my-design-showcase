@@ -7,6 +7,8 @@ import bannerAsset from "@/assets/banner.png.asset.json";
 import kidsAsset from "@/assets/kids.png.asset.json";
 import gkAsset from "@/assets/gk.png.asset.json";
 import cvAsset from "@/assets/Debora_Novianti_CV.pdf.asset.json";
+import slideForewordAsset from "@/assets/home-slide-foreword.png.asset.json";
+import slideBahasaAsset from "@/assets/home-slide-bahasa.png.asset.json";
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -47,6 +49,8 @@ function Index() {
 
 function Banner() {
   const slides = [
+    { src: slideForewordAsset.url, alt: "Learn about Graphic Designer — Illustration Book spreads" },
+    { src: slideBahasaAsset.url, alt: "Coding For Kids — Bahasa Pemrograman spreads" },
     { src: bannerAsset.url, alt: "Koentji — Penjualan Makin Cuan, GrabMerchant" },
     { src: kidsAsset.url, alt: "Little Wear by Little Palmerhaus" },
     { src: gkAsset.url, alt: "Guru Kreator — Instagram posts" },
