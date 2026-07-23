@@ -12,13 +12,13 @@ import lag6 from "@/assets/lag-6.png.asset.json";
 export const Route = createFileRoute("/work/learn-graphic-designer")({
   head: () => ({
     meta: [
-      { title: "Learn about Graphic Designer — Editorial Design" },
+      { title: "Learn about Graphic Designer — Illustration Book" },
       {
         name: "description",
         content:
-          "Editorial design for a book exploring the essential concepts of graphic design.",
+          "Illustration book exploring the essential concepts of graphic design.",
       },
-      { property: "og:title", content: "Learn about Graphic Designer — Editorial Design" },
+      { property: "og:title", content: "Learn about Graphic Designer — Illustration Book" },
       {
         property: "og:description",
         content:
@@ -67,7 +67,7 @@ function LearnGraphicDesigner() {
           <div>
             <div className="eyebrow text-foreground/60">Learn about Graphic Designer</div>
             <h1 className="mt-4 font-serif text-5xl leading-[1.05] md:text-7xl">
-              <em>Editorial Design</em>
+              <em>Illustration Book</em>
             </h1>
           </div>
           <div className="mt-12 md:mt-16">
