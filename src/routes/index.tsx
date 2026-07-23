@@ -210,7 +210,9 @@ function Marquee() {
 
 function Selected() {
   const rows: Array<[string, string]> = [
-    ["Learn about Graphic Designer", "Illustration Book"],
+    ["Learn about Graphic Design", "Illustration Book"],
+    ["Coding for Kids", "Illustration Book"],
+    ["Me - Taylor Swift (Motion Graphic Remake)", "Motion Graphic"],
     ["Guru Kreator", "Social Media Design"],
     ["Stronger Together", "Identity"],
     ["Paideia Educational Solutions x Google", "Brand Collateral Design"],
@@ -240,11 +242,11 @@ function Selected() {
                         ? "/work/stronger-together"
                         : title === "Paideia Educational Solutions x Google"
                           ? "/work/paideia-google"
-                            : title === "Learn about Graphic Designer"
+                            : title === "Learn about Graphic Design"
                             ? "/work/learn-graphic-designer"
-                            : title === "Coding For Kids"
+                            : title === "Coding for Kids"
                               ? "/work/coding-for-kids"
-                              : title === "Me - Taylor Swift (Motion Graphics Remake)"
+                              : title === "Me - Taylor Swift (Motion Graphic Remake)"
                                 ? "/work/motion-graphic"
                                 : null;
             const className =
