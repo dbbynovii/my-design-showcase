@@ -10,13 +10,13 @@ import cfk4 from "@/assets/cfk-4.png.asset.json";
 export const Route = createFileRoute("/work/coding-for-kids")({
   head: () => ({
     meta: [
-      { title: "Coding For Kids — Editorial Design" },
+      { title: "Coding For Kids — Illustration Book" },
       {
         name: "description",
         content:
-          "Editorial design for a children's book introducing coding logic through Scratch.",
+          "Illustration book introducing coding logic for children through Scratch.",
       },
-      { property: "og:title", content: "Coding For Kids — Editorial Design" },
+      { property: "og:title", content: "Coding For Kids — Illustration Book" },
       {
         property: "og:description",
         content:
@@ -65,7 +65,7 @@ function CodingForKids() {
           <div>
             <div className="eyebrow text-foreground/60">Coding For Kids</div>
             <h1 className="mt-4 font-serif text-5xl leading-[1.05] md:text-7xl">
-              <em>Editorial Design</em>
+              <em>Illustration Book</em>
             </h1>
           </div>
           <div className="mt-12 md:mt-16">
