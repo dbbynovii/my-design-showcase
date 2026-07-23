@@ -150,7 +150,7 @@ function Hero() {
           </h2>
           <div className="mt-8 space-y-6 text-lg leading-relaxed">
             <p>
-              An independent graphic designer crafting visual <em>identities</em>,<br className="hidden md:inline" />
+              A graphic designer crafting visual <em>identities</em>,<br className="hidden md:inline" />
               editorial design and marketing materials<br className="hidden md:inline" />
               that combine aesthetics with strategic communication.
             </p>
