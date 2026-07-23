@@ -65,9 +65,9 @@ function LearnGraphicDesigner() {
 
         <div className="mx-auto max-w-[1400px] px-6 py-16 md:px-10 md:py-24">
           <div>
-            <div className="eyebrow text-foreground/60">Learn about Graphic Designer</div>
+            <div className="eyebrow text-foreground/60">Illustration Book</div>
             <h1 className="mt-4 font-serif text-5xl leading-[1.05] md:text-7xl">
-              <em>Illustration Book</em>
+              <em>Learn about Graphic Designer</em>
             </h1>
           </div>
           <div className="mt-12 md:mt-16">
