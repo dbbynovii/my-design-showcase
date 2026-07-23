@@ -49,6 +49,8 @@ function Index() {
 
 function Banner() {
   const slides = [
+    { src: slideForewordAsset.url, alt: "Learn about Graphic Designer — Illustration Book spreads" },
+    { src: slideBahasaAsset.url, alt: "Coding For Kids — Bahasa Pemrograman spreads" },
     { src: bannerAsset.url, alt: "Koentji — Penjualan Makin Cuan, GrabMerchant" },
     { src: kidsAsset.url, alt: "Little Wear by Little Palmerhaus" },
     { src: gkAsset.url, alt: "Guru Kreator — Instagram posts" },
