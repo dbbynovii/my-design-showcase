@@ -82,7 +82,7 @@ function LearnGraphicDesigner() {
 
       <section className="border-b border-foreground/20">
         <div className="mx-auto max-w-[1400px] px-6 py-16 md:px-10 md:py-24">
-          <div className="eyebrow text-foreground/60">Selected Spreads</div>
+          <div className="eyebrow text-foreground/60">Preview Work</div>
           <div className="mt-10 flex items-center gap-4 md:gap-6">
             <button
               type="button"
