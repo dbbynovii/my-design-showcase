@@ -7,6 +7,10 @@ import gk2 from "@/assets/gk-2.png.asset.json";
 import video1 from "@/assets/gk-video-1.mp4.asset.json";
 import video2 from "@/assets/gk-video-2.mp4.asset.json";
 import video3 from "@/assets/gk-video-3.mp4.asset.json";
+import slide1 from "@/assets/gk-slide-1.mp4.asset.json";
+import slide2 from "@/assets/gk-slide-2.mp4.asset.json";
+import slide3 from "@/assets/gk-slide-3.mp4.asset.json";
+import slide4 from "@/assets/gk-slide-4.mp4.asset.json";
 
 export const Route = createFileRoute("/work/guru-kreator")({
   head: () => ({
@@ -84,7 +88,19 @@ function GuruKreator() {
       <section className="border-b border-foreground/20">
         <div className="mx-auto max-w-[1400px] px-6 py-16 md:px-10 md:py-24">
           <div className="eyebrow text-foreground/60">Featured Videos</div>
-          <div className="mt-10 grid grid-cols-1 gap-6 sm:grid-cols-3 md:gap-8">
+          <div className="mt-10 grid grid-cols-1 gap-6 sm:grid-cols-4 md:gap-8">
+            {[slide1, slide2, slide3, slide4].map((v, i) => (
+              <video
+                key={`s-${i}`}
+                src={v.url}
+                controls
+                playsInline
+                preload="metadata"
+                className="aspect-[9/16] w-full rounded-sm bg-foreground/5 object-cover"
+              />
+            ))}
+          </div>
+          <div className="mt-6 grid grid-cols-1 gap-6 sm:grid-cols-3 md:mt-8 md:gap-8">
             {[video1, video2, video3].map((v, i) => (
               <video
                 key={i}
