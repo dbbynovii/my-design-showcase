@@ -17,6 +17,7 @@ import { Route as WorkLittlePalmerhausRouteImport } from './routes/work.little-p
 import { Route as WorkLearnGraphicDesignerRouteImport } from './routes/work.learn-graphic-designer'
 import { Route as WorkGuruKreatorRouteImport } from './routes/work.guru-kreator'
 import { Route as WorkGrabMerchantRouteImport } from './routes/work.grab-merchant'
+import { Route as WorkCodingForKidsRouteImport } from './routes/work.coding-for-kids'
 
 const IndexRoute = IndexRouteImport.update({
   id: '/',
@@ -59,9 +60,15 @@ const WorkGrabMerchantRoute = WorkGrabMerchantRouteImport.update({
   path: '/work/grab-merchant',
   getParentRoute: () => rootRouteImport,
 } as any)
+const WorkCodingForKidsRoute = WorkCodingForKidsRouteImport.update({
+  id: '/work/coding-for-kids',
+  path: '/work/coding-for-kids',
+  getParentRoute: () => rootRouteImport,
+} as any)
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
+  '/work/coding-for-kids': typeof WorkCodingForKidsRoute
   '/work/grab-merchant': typeof WorkGrabMerchantRoute
   '/work/guru-kreator': typeof WorkGuruKreatorRoute
   '/work/learn-graphic-designer': typeof WorkLearnGraphicDesignerRoute
@@ -72,6 +79,7 @@ export interface FileRoutesByFullPath {
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
+  '/work/coding-for-kids': typeof WorkCodingForKidsRoute
   '/work/grab-merchant': typeof WorkGrabMerchantRoute
   '/work/guru-kreator': typeof WorkGuruKreatorRoute
   '/work/learn-graphic-designer': typeof WorkLearnGraphicDesignerRoute
@@ -83,6 +91,7 @@ export interface FileRoutesByTo {
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
+  '/work/coding-for-kids': typeof WorkCodingForKidsRoute
   '/work/grab-merchant': typeof WorkGrabMerchantRoute
   '/work/guru-kreator': typeof WorkGuruKreatorRoute
   '/work/learn-graphic-designer': typeof WorkLearnGraphicDesignerRoute
@@ -95,6 +104,7 @@ export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
   fullPaths:
     | '/'
+    | '/work/coding-for-kids'
     | '/work/grab-merchant'
     | '/work/guru-kreator'
     | '/work/learn-graphic-designer'
@@ -105,6 +115,7 @@ export interface FileRouteTypes {
   fileRoutesByTo: FileRoutesByTo
   to:
     | '/'
+    | '/work/coding-for-kids'
     | '/work/grab-merchant'
     | '/work/guru-kreator'
     | '/work/learn-graphic-designer'
@@ -115,6 +126,7 @@ export interface FileRouteTypes {
   id:
     | '__root__'
     | '/'
+    | '/work/coding-for-kids'
     | '/work/grab-merchant'
     | '/work/guru-kreator'
     | '/work/learn-graphic-designer'
@@ -126,6 +138,7 @@ export interface FileRouteTypes {
 }
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
+  WorkCodingForKidsRoute: typeof WorkCodingForKidsRoute
   WorkGrabMerchantRoute: typeof WorkGrabMerchantRoute
   WorkGuruKreatorRoute: typeof WorkGuruKreatorRoute
   WorkLearnGraphicDesignerRoute: typeof WorkLearnGraphicDesignerRoute
@@ -193,11 +206,19 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof WorkGrabMerchantRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/work/coding-for-kids': {
+      id: '/work/coding-for-kids'
+      path: '/work/coding-for-kids'
+      fullPath: '/work/coding-for-kids'
+      preLoaderRoute: typeof WorkCodingForKidsRouteImport
+      parentRoute: typeof rootRouteImport
+    }
   }
 }
 
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
+  WorkCodingForKidsRoute: WorkCodingForKidsRoute,
   WorkGrabMerchantRoute: WorkGrabMerchantRoute,
   WorkGuruKreatorRoute: WorkGuruKreatorRoute,
   WorkLearnGraphicDesignerRoute: WorkLearnGraphicDesignerRoute,

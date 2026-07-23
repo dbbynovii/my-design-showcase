@@ -213,6 +213,7 @@ function Selected() {
     ["Grab Merchant", "Social Media & Ads Design"],
     ["Town Talk Polish Indonesia", "Social Media Design"],
     ["Learn about Graphic Designer", "Editorial Design"],
+    ["Coding For Kids", "Editorial Design"],
   ];
   return (
     <section id="work" className="border-b border-foreground/20">
@@ -236,9 +237,11 @@ function Selected() {
                         ? "/work/stronger-together"
                         : title === "Paideia Educational Solutions x Google"
                           ? "/work/paideia-google"
-                          : title === "Learn about Graphic Designer"
+                            : title === "Learn about Graphic Designer"
                             ? "/work/learn-graphic-designer"
-                            : null;
+                            : title === "Coding For Kids"
+                              ? "/work/coding-for-kids"
+                              : null;
             const className =
               "group grid grid-cols-[1fr_auto] items-baseline gap-4 border-b border-foreground/20 py-5 transition-colors hover:bg-foreground hover:text-background md:py-7";
             const inner = (
