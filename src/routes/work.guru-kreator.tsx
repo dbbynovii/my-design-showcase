@@ -7,6 +7,10 @@ import gk2 from "@/assets/gk-2.png.asset.json";
 import video1 from "@/assets/gk-video-1.mp4.asset.json";
 import video2 from "@/assets/gk-video-2.mp4.asset.json";
 import video3 from "@/assets/gk-video-3.mp4.asset.json";
+import slide1 from "@/assets/gk-slide-1.mp4.asset.json";
+import slide2 from "@/assets/gk-slide-2.mp4.asset.json";
+import slide3 from "@/assets/gk-slide-3.mp4.asset.json";
+import slide4 from "@/assets/gk-slide-4.mp4.asset.json";
 
 export const Route = createFileRoute("/work/guru-kreator")({
   head: () => ({
