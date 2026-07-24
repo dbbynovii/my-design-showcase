@@ -6,7 +6,7 @@ import portraitAsset from "@/assets/photo_profil.png.asset.json";
 import bannerAsset from "@/assets/banner.png.asset.json";
 import kidsAsset from "@/assets/kids.png.asset.json";
 import gkAsset from "@/assets/gk.png.asset.json";
-import cvAsset from "@/assets/Debora_Novianti_CV.pdf.asset.json";
+import cvAsset from "@/assets/Debora_Novianti_Resume.pdf.asset.json";
 import slideForewordAsset from "@/assets/home-slide-foreword.png.asset.json";
 import slideBahasaAsset from "@/assets/home-slide-bahasa.png.asset.json";
 
@@ -177,7 +177,7 @@ function Hero() {
           <div className="mt-10">
             <a
               href={cvAsset.url}
-              download="Debora_Novianti_CV.pdf"
+              download="Debora_Novianti_Resume.pdf"
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex items-center gap-2 border border-foreground bg-foreground px-6 py-3 text-sm text-background transition-colors hover:bg-background hover:text-foreground"
