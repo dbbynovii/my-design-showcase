@@ -15,9 +15,9 @@ import thumbCfkAsset from "@/assets/thumb-cfk.png.asset.json";
 import thumbGkAsset from "@/assets/thumb-gk.png.asset.json";
 import thumbStAsset from "@/assets/thumb-st.png.asset.json";
 import paideiaMainAsset from "@/assets/paideia-main.png.asset.json";
-import lpMainAsset from "@/assets/lp-main.png.asset.json";
-import gmMainAsset from "@/assets/gm-main.png.asset.json";
-import ttMainAsset from "@/assets/tt-main.png.asset.json";
+import thumbLpAsset from "@/assets/thumb-lp.png.asset.json";
+import thumbGmAsset from "@/assets/thumb-gm.png.asset.json";
+import thumbTtAsset from "@/assets/thumb-tt.png.asset.json";
 
 export const Route = createFileRoute("/")({
   head: () => ({
