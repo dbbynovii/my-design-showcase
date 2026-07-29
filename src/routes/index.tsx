@@ -260,19 +260,19 @@ function Selected() {
       title: "Little Palmerhaus",
       disc: "Social Media & Ecommerce Design",
       to: "/work/little-palmerhaus",
-      media: lpMainAsset.url,
+      media: thumbLpAsset.url,
     },
     {
       title: "Grab Merchant",
       disc: "Social Media & Ads Design",
       to: "/work/grab-merchant",
-      media: gmMainAsset.url,
+      media: thumbGmAsset.url,
     },
     {
       title: "Town Talk Polish Indonesia",
       disc: "Social Media Design",
       to: "/work/town-talk",
-      media: ttMainAsset.url,
+      media: thumbTtAsset.url,
     },
   ];
 
