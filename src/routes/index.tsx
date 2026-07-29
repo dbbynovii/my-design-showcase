@@ -227,13 +227,13 @@ function Selected() {
       title: "Learn about Graphic Design",
       disc: "Illustration Book",
       to: "/work/learn-graphic-designer",
-      media: lagMainAsset.url,
+      media: thumbLagAsset.url,
     },
     {
       title: "Coding for Kids",
       disc: "Illustration Book",
       to: "/work/coding-for-kids",
-      media: cfkMainAsset.url,
+      media: thumbCfkAsset.url,
     },
     {
       title: "Me - Taylor Swift (Motion Graphic Remake)",
@@ -246,13 +246,13 @@ function Selected() {
       title: "Guru Kreator",
       disc: "Social Media Design",
       to: "/work/guru-kreator",
-      media: gk1Asset.url,
+      media: thumbGkAsset.url,
     },
     {
       title: "Stronger Together",
       disc: "Identity",
       to: "/work/stronger-together",
-      media: stMainAsset.url,
+      media: thumbStAsset.url,
     },
     {
       title: "Paideia Educational Solutions x Google",
