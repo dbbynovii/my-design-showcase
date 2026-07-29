@@ -9,6 +9,15 @@ import gkAsset from "@/assets/gk.png.asset.json";
 import cvAsset from "@/assets/Debora_Novianti_Resume.pdf.asset.json";
 import slideForewordAsset from "@/assets/home-slide-foreword.png.asset.json";
 import slideBahasaAsset from "@/assets/home-slide-bahasa.png.asset.json";
+import lagMainAsset from "@/assets/lag-main.png.asset.json";
+import cfkMainAsset from "@/assets/cfk-main.png.asset.json";
+import taylorVideoAsset from "@/assets/me-taylor-swift.mp4.asset.json";
+import gk1Asset from "@/assets/gk-1.png.asset.json";
+import stMainAsset from "@/assets/st-main.png.asset.json";
+import paideiaMainAsset from "@/assets/paideia-main.png.asset.json";
+import lpMainAsset from "@/assets/lp-main.png.asset.json";
+import gmMainAsset from "@/assets/gm-main.png.asset.json";
+import ttMainAsset from "@/assets/tt-main.png.asset.json";
 
 export const Route = createFileRoute("/")({
   head: () => ({
