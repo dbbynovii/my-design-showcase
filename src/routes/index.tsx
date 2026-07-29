@@ -9,11 +9,11 @@ import gkAsset from "@/assets/gk.png.asset.json";
 import cvAsset from "@/assets/Debora_Novianti_Resume.pdf.asset.json";
 import slideForewordAsset from "@/assets/home-slide-foreword.png.asset.json";
 import slideBahasaAsset from "@/assets/home-slide-bahasa.png.asset.json";
-import lagMainAsset from "@/assets/lag-main.png.asset.json";
-import cfkMainAsset from "@/assets/cfk-main.png.asset.json";
 import taylorVideoAsset from "@/assets/me-taylor-swift.mp4.asset.json";
-import gk1Asset from "@/assets/gk-1.png.asset.json";
-import stMainAsset from "@/assets/st-main.png.asset.json";
+import thumbLagAsset from "@/assets/thumb-lag.png.asset.json";
+import thumbCfkAsset from "@/assets/thumb-cfk.png.asset.json";
+import thumbGkAsset from "@/assets/thumb-gk.png.asset.json";
+import thumbStAsset from "@/assets/thumb-st.png.asset.json";
 import paideiaMainAsset from "@/assets/paideia-main.png.asset.json";
 import lpMainAsset from "@/assets/lp-main.png.asset.json";
 import gmMainAsset from "@/assets/gm-main.png.asset.json";
@@ -223,13 +223,13 @@ function Selected() {
       title: "Learn about Graphic Design",
       disc: "Illustration Book",
       to: "/work/learn-graphic-designer",
-      media: lagMainAsset.url,
+      media: thumbLagAsset.url,
     },
     {
       title: "Coding for Kids",
       disc: "Illustration Book",
       to: "/work/coding-for-kids",
-      media: cfkMainAsset.url,
+      media: thumbCfkAsset.url,
     },
     {
       title: "Me - Taylor Swift (Motion Graphic Remake)",
@@ -242,13 +242,13 @@ function Selected() {
       title: "Guru Kreator",
       disc: "Social Media Design",
       to: "/work/guru-kreator",
-      media: gk1Asset.url,
+      media: thumbGkAsset.url,
     },
     {
       title: "Stronger Together",
       disc: "Identity",
       to: "/work/stronger-together",
-      media: stMainAsset.url,
+      media: thumbStAsset.url,
     },
     {
       title: "Paideia Educational Solutions x Google",
