@@ -209,17 +209,64 @@ function Marquee() {
 }
 
 function Selected() {
-  const rows: Array<[string, string]> = [
-    ["Learn about Graphic Design", "Illustration Book"],
-    ["Coding for Kids", "Illustration Book"],
-    ["Me - Taylor Swift (Motion Graphic Remake)", "Motion Graphic"],
-    ["Guru Kreator", "Social Media Design"],
-    ["Stronger Together", "Identity"],
-    ["Paideia Educational Solutions x Google", "Brand Collateral Design"],
-    ["Little Palmerhaus", "Social Media & Ecommerce Design"],
-    ["Grab Merchant", "Social Media & Ads Design"],
-    ["Town Talk Polish Indonesia", "Social Media Design"],
+  const projects = [
+    {
+      title: "Learn about Graphic Design",
+      disc: "Illustration Book",
+      to: "/work/learn-graphic-designer",
+      media: lagMainAsset.url,
+    },
+    {
+      title: "Coding for Kids",
+      disc: "Illustration Book",
+      to: "/work/coding-for-kids",
+      media: cfkMainAsset.url,
+    },
+    {
+      title: "Me - Taylor Swift (Motion Graphic Remake)",
+      disc: "Motion Graphic",
+      to: "/work/motion-graphic",
+      media: taylorVideoAsset.url,
+      isVideo: true,
+    },
+    {
+      title: "Guru Kreator",
+      disc: "Social Media Design",
+      to: "/work/guru-kreator",
+      media: gk1Asset.url,
+    },
+    {
+      title: "Stronger Together",
+      disc: "Identity",
+      to: "/work/stronger-together",
+      media: stMainAsset.url,
+    },
+    {
+      title: "Paideia Educational Solutions x Google",
+      disc: "Brand Collateral Design",
+      to: "/work/paideia-google",
+      media: paideiaMainAsset.url,
+    },
+    {
+      title: "Little Palmerhaus",
+      disc: "Social Media & Ecommerce Design",
+      to: "/work/little-palmerhaus",
+      media: lpMainAsset.url,
+    },
+    {
+      title: "Grab Merchant",
+      disc: "Social Media & Ads Design",
+      to: "/work/grab-merchant",
+      media: gmMainAsset.url,
+    },
+    {
+      title: "Town Talk Polish Indonesia",
+      disc: "Social Media Design",
+      to: "/work/town-talk",
+      media: ttMainAsset.url,
+    },
   ];
+
   return (
     <section id="work" className="border-b border-foreground/20">
       <div className="mx-auto max-w-[1400px] px-6 py-16 md:px-10 md:py-24">
@@ -227,54 +274,39 @@ function Selected() {
           Selected <em>works</em>
         </h2>
 
-        <div className="mt-12 border-t border-foreground/30">
-          {rows.map(([title, disc]) => {
-            const linkTo =
-              title === "Little Palmerhaus"
-                ? "/work/little-palmerhaus"
-                : title === "Grab Merchant"
-                  ? "/work/grab-merchant"
-                : title === "Guru Kreator"
-                    ? "/work/guru-kreator"
-                    : title === "Town Talk Polish Indonesia"
-                      ? "/work/town-talk"
-                      : title === "Stronger Together"
-                        ? "/work/stronger-together"
-                        : title === "Paideia Educational Solutions x Google"
-                          ? "/work/paideia-google"
-                            : title === "Learn about Graphic Design"
-                            ? "/work/learn-graphic-designer"
-                            : title === "Coding for Kids"
-                              ? "/work/coding-for-kids"
-                              : title === "Me - Taylor Swift (Motion Graphic Remake)"
-                                ? "/work/motion-graphic"
-                                : null;
-            const className =
-              "group grid grid-cols-[1fr_auto] items-baseline gap-4 border-b border-foreground/20 py-5 transition-colors hover:bg-foreground hover:text-background md:py-7";
-            const inner = (
-              <>
-                <span className="font-serif text-2xl md:text-4xl">
-                  {title}
-                  <span className="ml-3 inline-block font-sans text-base italic opacity-0 transition-opacity group-hover:opacity-100">
-                    →
-                  </span>
+        <div className="mt-12 grid grid-cols-1 gap-x-10 gap-y-14 md:grid-cols-2">
+          {projects.map((p) => (
+            <Link key={p.title} to={p.to} className="group block">
+              <span className="inline-block rounded-full border border-foreground/20 px-3 py-1 text-xs tracking-wide text-foreground/70">
+                {p.disc}
+              </span>
+              <h3 className="mt-4 font-serif text-3xl md:text-4xl">
+                {p.title}
+                <span className="ml-3 inline-block font-sans text-base italic opacity-0 transition-opacity group-hover:opacity-100">
+                  →
                 </span>
-                <span className="text-right text-sm text-foreground/70 group-hover:text-background/70">
-                  {disc}
-                </span>
-              </>
-            );
-            return linkTo ? (
-              <Link key={title} to={linkTo} className={className}>
-                {inner}
-              </Link>
-            ) : (
-              <a key={title} href="#work" className={className}>
-                {inner}
-              </a>
-            );
-          })}
-
+              </h3>
+              <div className="mt-5 aspect-[16/10] overflow-hidden bg-muted">
+                {p.isVideo ? (
+                  <video
+                    src={p.media}
+                    muted
+                    loop
+                    playsInline
+                    autoPlay
+                    className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-[1.03]"
+                  />
+                ) : (
+                  <img
+                    src={p.media}
+                    alt={p.title}
+                    loading="lazy"
+                    className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-[1.03]"
+                  />
+                )}
+              </div>
+            </Link>
+          ))}
         </div>
       </div>
     </section>
