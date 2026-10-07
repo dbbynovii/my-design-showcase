@@ -60,12 +60,12 @@ function Index() {
 
 function Banner() {
   const slides = [
+    { src: bpFlowerAsset.url, alt: "Beauty Portrait — cinematic photo with flower" },
     { src: slideForewordAsset.url, alt: "Learn about Graphic Designer — Illustration Book spreads" },
     { src: slideBahasaAsset.url, alt: "Coding For Kids — Bahasa Pemrograman spreads" },
     { src: bannerAsset.url, alt: "Koentji — Penjualan Makin Cuan, GrabMerchant" },
     { src: kidsAsset.url, alt: "Little Wear by Little Palmerhaus" },
     { src: gkAsset.url, alt: "Guru Kreator — Instagram posts" },
-    { src: bpFlowerAsset.url, alt: "Beauty Portrait — cinematic photo with flower" },
   ];
   const [emblaRef, emblaApi] = useEmblaCarousel({ loop: true }, [
     Autoplay({ delay: 4000, stopOnInteraction: false, stopOnMouseEnter: true }),
