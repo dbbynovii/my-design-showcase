@@ -19,6 +19,7 @@ import thumbLpAsset from "@/assets/thumb-lp.png.asset.json";
 import thumbGmAsset from "@/assets/thumb-gm.png.asset.json";
 import thumbTtAsset from "@/assets/thumb-tt.png.asset.json";
 import thumbBpAsset from "@/assets/bp-1.png.asset.json";
+import bpFlowerAsset from "@/assets/bp-flower.jpg.asset.json";
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -64,6 +65,7 @@ function Banner() {
     { src: bannerAsset.url, alt: "Koentji — Penjualan Makin Cuan, GrabMerchant" },
     { src: kidsAsset.url, alt: "Little Wear by Little Palmerhaus" },
     { src: gkAsset.url, alt: "Guru Kreator — Instagram posts" },
+    { src: bpFlowerAsset.url, alt: "Beauty Portrait — cinematic photo with flower" },
   ];
   const [emblaRef, emblaApi] = useEmblaCarousel({ loop: true }, [
     Autoplay({ delay: 4000, stopOnInteraction: false, stopOnMouseEnter: true }),
@@ -220,6 +222,12 @@ function Marquee() {
 function Selected() {
   const projects = [
     {
+      title: "Beauty Portrait",
+      disc: "Photography",
+      to: "/work/beauty-portrait",
+      media: thumbBpAsset.url,
+    },
+    {
       title: "Learn about Graphic Design",
       disc: "Illustration Book",
       to: "/work/learn-graphic-designer",
@@ -273,12 +281,6 @@ function Selected() {
       disc: "Social Media Design",
       to: "/work/town-talk",
       media: thumbTtAsset.url,
-    },
-    {
-      title: "Beauty Portrait",
-      disc: "Photography",
-      to: "/work/beauty-portrait",
-      media: thumbBpAsset.url,
     },
   ];
 
