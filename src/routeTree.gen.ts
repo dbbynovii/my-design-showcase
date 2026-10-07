@@ -10,40 +10,45 @@
 
 import { Route as rootRouteImport } from './routes/__root'
 import { Route as IndexRouteImport } from './routes/index'
-import { Route as WorkBeautyPortraitRouteImport } from './routes/work.beauty-portrait'
-import { Route as WorkCodingForKidsRouteImport } from './routes/work.coding-for-kids'
-import { Route as WorkGrabMerchantRouteImport } from './routes/work.grab-merchant'
-import { Route as WorkGuruKreatorRouteImport } from './routes/work.guru-kreator'
-import { Route as WorkLearnGraphicDesignerRouteImport } from './routes/work.learn-graphic-designer'
-import { Route as WorkLittlePalmerhausRouteImport } from './routes/work.little-palmerhaus'
-import { Route as WorkMotionGraphicRouteImport } from './routes/work.motion-graphic'
-import { Route as WorkPaideiaGoogleRouteImport } from './routes/work.paideia-google'
-import { Route as WorkStrongerTogetherRouteImport } from './routes/work.stronger-together'
 import { Route as WorkTownTalkRouteImport } from './routes/work.town-talk'
+import { Route as WorkStrongerTogetherRouteImport } from './routes/work.stronger-together'
+import { Route as WorkPaideiaGoogleRouteImport } from './routes/work.paideia-google'
+import { Route as WorkMotionGraphicRouteImport } from './routes/work.motion-graphic'
+import { Route as WorkLittlePalmerhausRouteImport } from './routes/work.little-palmerhaus'
+import { Route as WorkLearnGraphicDesignerRouteImport } from './routes/work.learn-graphic-designer'
+import { Route as WorkGuruKreatorRouteImport } from './routes/work.guru-kreator'
+import { Route as WorkGrabMerchantRouteImport } from './routes/work.grab-merchant'
+import { Route as WorkCodingForKidsRouteImport } from './routes/work.coding-for-kids'
+import { Route as WorkBeautyPortraitRouteImport } from './routes/work.beauty-portrait'
 
 const IndexRoute = IndexRouteImport.update({
   id: '/',
   path: '/',
   getParentRoute: () => rootRouteImport,
 } as any)
-const WorkBeautyPortraitRoute = WorkBeautyPortraitRouteImport.update({
-  id: '/work/beauty-portrait',
-  path: '/work/beauty-portrait',
+const WorkTownTalkRoute = WorkTownTalkRouteImport.update({
+  id: '/work/town-talk',
+  path: '/work/town-talk',
   getParentRoute: () => rootRouteImport,
 } as any)
-const WorkCodingForKidsRoute = WorkCodingForKidsRouteImport.update({
-  id: '/work/coding-for-kids',
-  path: '/work/coding-for-kids',
+const WorkStrongerTogetherRoute = WorkStrongerTogetherRouteImport.update({
+  id: '/work/stronger-together',
+  path: '/work/stronger-together',
   getParentRoute: () => rootRouteImport,
 } as any)
-const WorkGrabMerchantRoute = WorkGrabMerchantRouteImport.update({
-  id: '/work/grab-merchant',
-  path: '/work/grab-merchant',
+const WorkPaideiaGoogleRoute = WorkPaideiaGoogleRouteImport.update({
+  id: '/work/paideia-google',
+  path: '/work/paideia-google',
   getParentRoute: () => rootRouteImport,
 } as any)
-const WorkGuruKreatorRoute = WorkGuruKreatorRouteImport.update({
-  id: '/work/guru-kreator',
-  path: '/work/guru-kreator',
+const WorkMotionGraphicRoute = WorkMotionGraphicRouteImport.update({
+  id: '/work/motion-graphic',
+  path: '/work/motion-graphic',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const WorkLittlePalmerhausRoute = WorkLittlePalmerhausRouteImport.update({
+  id: '/work/little-palmerhaus',
+  path: '/work/little-palmerhaus',
   getParentRoute: () => rootRouteImport,
 } as any)
 const WorkLearnGraphicDesignerRoute =
@@ -52,29 +57,24 @@ const WorkLearnGraphicDesignerRoute =
     path: '/work/learn-graphic-designer',
     getParentRoute: () => rootRouteImport,
   } as any)
-const WorkLittlePalmerhausRoute = WorkLittlePalmerhausRouteImport.update({
-  id: '/work/little-palmerhaus',
-  path: '/work/little-palmerhaus',
+const WorkGuruKreatorRoute = WorkGuruKreatorRouteImport.update({
+  id: '/work/guru-kreator',
+  path: '/work/guru-kreator',
   getParentRoute: () => rootRouteImport,
 } as any)
-const WorkMotionGraphicRoute = WorkMotionGraphicRouteImport.update({
-  id: '/work/motion-graphic',
-  path: '/work/motion-graphic',
+const WorkGrabMerchantRoute = WorkGrabMerchantRouteImport.update({
+  id: '/work/grab-merchant',
+  path: '/work/grab-merchant',
   getParentRoute: () => rootRouteImport,
 } as any)
-const WorkPaideiaGoogleRoute = WorkPaideiaGoogleRouteImport.update({
-  id: '/work/paideia-google',
-  path: '/work/paideia-google',
+const WorkCodingForKidsRoute = WorkCodingForKidsRouteImport.update({
+  id: '/work/coding-for-kids',
+  path: '/work/coding-for-kids',
   getParentRoute: () => rootRouteImport,
 } as any)
-const WorkStrongerTogetherRoute = WorkStrongerTogetherRouteImport.update({
-  id: '/work/stronger-together',
-  path: '/work/stronger-together',
-  getParentRoute: () => rootRouteImport,
-} as any)
-const WorkTownTalkRoute = WorkTownTalkRouteImport.update({
-  id: '/work/town-talk',
-  path: '/work/town-talk',
+const WorkBeautyPortraitRoute = WorkBeautyPortraitRouteImport.update({
+  id: '/work/beauty-portrait',
+  path: '/work/beauty-portrait',
   getParentRoute: () => rootRouteImport,
 } as any)
 
@@ -183,60 +183,11 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof IndexRouteImport
       parentRoute: typeof rootRouteImport
     }
-    '/work/beauty-portrait': {
-      id: '/work/beauty-portrait'
-      path: '/work/beauty-portrait'
-      fullPath: '/work/beauty-portrait'
-      preLoaderRoute: typeof WorkBeautyPortraitRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/work/coding-for-kids': {
-      id: '/work/coding-for-kids'
-      path: '/work/coding-for-kids'
-      fullPath: '/work/coding-for-kids'
-      preLoaderRoute: typeof WorkCodingForKidsRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/work/grab-merchant': {
-      id: '/work/grab-merchant'
-      path: '/work/grab-merchant'
-      fullPath: '/work/grab-merchant'
-      preLoaderRoute: typeof WorkGrabMerchantRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/work/guru-kreator': {
-      id: '/work/guru-kreator'
-      path: '/work/guru-kreator'
-      fullPath: '/work/guru-kreator'
-      preLoaderRoute: typeof WorkGuruKreatorRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/work/learn-graphic-designer': {
-      id: '/work/learn-graphic-designer'
-      path: '/work/learn-graphic-designer'
-      fullPath: '/work/learn-graphic-designer'
-      preLoaderRoute: typeof WorkLearnGraphicDesignerRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/work/little-palmerhaus': {
-      id: '/work/little-palmerhaus'
-      path: '/work/little-palmerhaus'
-      fullPath: '/work/little-palmerhaus'
-      preLoaderRoute: typeof WorkLittlePalmerhausRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/work/motion-graphic': {
-      id: '/work/motion-graphic'
-      path: '/work/motion-graphic'
-      fullPath: '/work/motion-graphic'
-      preLoaderRoute: typeof WorkMotionGraphicRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/work/paideia-google': {
-      id: '/work/paideia-google'
-      path: '/work/paideia-google'
-      fullPath: '/work/paideia-google'
-      preLoaderRoute: typeof WorkPaideiaGoogleRouteImport
+    '/work/town-talk': {
+      id: '/work/town-talk'
+      path: '/work/town-talk'
+      fullPath: '/work/town-talk'
+      preLoaderRoute: typeof WorkTownTalkRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/work/stronger-together': {
@@ -246,11 +197,60 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof WorkStrongerTogetherRouteImport
       parentRoute: typeof rootRouteImport
     }
-    '/work/town-talk': {
-      id: '/work/town-talk'
-      path: '/work/town-talk'
-      fullPath: '/work/town-talk'
-      preLoaderRoute: typeof WorkTownTalkRouteImport
+    '/work/paideia-google': {
+      id: '/work/paideia-google'
+      path: '/work/paideia-google'
+      fullPath: '/work/paideia-google'
+      preLoaderRoute: typeof WorkPaideiaGoogleRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/work/motion-graphic': {
+      id: '/work/motion-graphic'
+      path: '/work/motion-graphic'
+      fullPath: '/work/motion-graphic'
+      preLoaderRoute: typeof WorkMotionGraphicRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/work/little-palmerhaus': {
+      id: '/work/little-palmerhaus'
+      path: '/work/little-palmerhaus'
+      fullPath: '/work/little-palmerhaus'
+      preLoaderRoute: typeof WorkLittlePalmerhausRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/work/learn-graphic-designer': {
+      id: '/work/learn-graphic-designer'
+      path: '/work/learn-graphic-designer'
+      fullPath: '/work/learn-graphic-designer'
+      preLoaderRoute: typeof WorkLearnGraphicDesignerRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/work/guru-kreator': {
+      id: '/work/guru-kreator'
+      path: '/work/guru-kreator'
+      fullPath: '/work/guru-kreator'
+      preLoaderRoute: typeof WorkGuruKreatorRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/work/grab-merchant': {
+      id: '/work/grab-merchant'
+      path: '/work/grab-merchant'
+      fullPath: '/work/grab-merchant'
+      preLoaderRoute: typeof WorkGrabMerchantRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/work/coding-for-kids': {
+      id: '/work/coding-for-kids'
+      path: '/work/coding-for-kids'
+      fullPath: '/work/coding-for-kids'
+      preLoaderRoute: typeof WorkCodingForKidsRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/work/beauty-portrait': {
+      id: '/work/beauty-portrait'
+      path: '/work/beauty-portrait'
+      fullPath: '/work/beauty-portrait'
+      preLoaderRoute: typeof WorkBeautyPortraitRouteImport
       parentRoute: typeof rootRouteImport
     }
   }
