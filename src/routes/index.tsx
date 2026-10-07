@@ -222,6 +222,12 @@ function Marquee() {
 function Selected() {
   const projects = [
     {
+      title: "Beauty Portrait",
+      disc: "Photography",
+      to: "/work/beauty-portrait",
+      media: thumbBpAsset.url,
+    },
+    {
       title: "Learn about Graphic Design",
       disc: "Illustration Book",
       to: "/work/learn-graphic-designer",
