@@ -274,6 +274,12 @@ function Selected() {
       to: "/work/town-talk",
       media: thumbTtAsset.url,
     },
+    {
+      title: "Beauty Portrait",
+      disc: "Photography",
+      to: "/work/beauty-portrait",
+      media: thumbBpAsset.url,
+    },
   ];
 
   return (
