@@ -18,6 +18,7 @@ import paideiaMainAsset from "@/assets/paideia-main.png.asset.json";
 import thumbLpAsset from "@/assets/thumb-lp.png.asset.json";
 import thumbGmAsset from "@/assets/thumb-gm.png.asset.json";
 import thumbTtAsset from "@/assets/thumb-tt.png.asset.json";
+import thumbBpAsset from "@/assets/bp-1.png.asset.json";
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -272,6 +273,12 @@ function Selected() {
       disc: "Social Media Design",
       to: "/work/town-talk",
       media: thumbTtAsset.url,
+    },
+    {
+      title: "Beauty Portrait",
+      disc: "Photography",
+      to: "/work/beauty-portrait",
+      media: thumbBpAsset.url,
     },
   ];
 

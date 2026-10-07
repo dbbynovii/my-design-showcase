@@ -19,6 +19,7 @@ import { Route as WorkLearnGraphicDesignerRouteImport } from './routes/work.lear
 import { Route as WorkGuruKreatorRouteImport } from './routes/work.guru-kreator'
 import { Route as WorkGrabMerchantRouteImport } from './routes/work.grab-merchant'
 import { Route as WorkCodingForKidsRouteImport } from './routes/work.coding-for-kids'
+import { Route as WorkBeautyPortraitRouteImport } from './routes/work.beauty-portrait'
 
 const IndexRoute = IndexRouteImport.update({
   id: '/',
@@ -71,9 +72,15 @@ const WorkCodingForKidsRoute = WorkCodingForKidsRouteImport.update({
   path: '/work/coding-for-kids',
   getParentRoute: () => rootRouteImport,
 } as any)
+const WorkBeautyPortraitRoute = WorkBeautyPortraitRouteImport.update({
+  id: '/work/beauty-portrait',
+  path: '/work/beauty-portrait',
+  getParentRoute: () => rootRouteImport,
+} as any)
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
+  '/work/beauty-portrait': typeof WorkBeautyPortraitRoute
   '/work/coding-for-kids': typeof WorkCodingForKidsRoute
   '/work/grab-merchant': typeof WorkGrabMerchantRoute
   '/work/guru-kreator': typeof WorkGuruKreatorRoute
@@ -86,6 +93,7 @@ export interface FileRoutesByFullPath {
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
+  '/work/beauty-portrait': typeof WorkBeautyPortraitRoute
   '/work/coding-for-kids': typeof WorkCodingForKidsRoute
   '/work/grab-merchant': typeof WorkGrabMerchantRoute
   '/work/guru-kreator': typeof WorkGuruKreatorRoute
@@ -99,6 +107,7 @@ export interface FileRoutesByTo {
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
+  '/work/beauty-portrait': typeof WorkBeautyPortraitRoute
   '/work/coding-for-kids': typeof WorkCodingForKidsRoute
   '/work/grab-merchant': typeof WorkGrabMerchantRoute
   '/work/guru-kreator': typeof WorkGuruKreatorRoute
@@ -113,6 +122,7 @@ export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
   fullPaths:
     | '/'
+    | '/work/beauty-portrait'
     | '/work/coding-for-kids'
     | '/work/grab-merchant'
     | '/work/guru-kreator'
@@ -125,6 +135,7 @@ export interface FileRouteTypes {
   fileRoutesByTo: FileRoutesByTo
   to:
     | '/'
+    | '/work/beauty-portrait'
     | '/work/coding-for-kids'
     | '/work/grab-merchant'
     | '/work/guru-kreator'
@@ -137,6 +148,7 @@ export interface FileRouteTypes {
   id:
     | '__root__'
     | '/'
+    | '/work/beauty-portrait'
     | '/work/coding-for-kids'
     | '/work/grab-merchant'
     | '/work/guru-kreator'
@@ -150,6 +162,7 @@ export interface FileRouteTypes {
 }
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
+  WorkBeautyPortraitRoute: typeof WorkBeautyPortraitRoute
   WorkCodingForKidsRoute: typeof WorkCodingForKidsRoute
   WorkGrabMerchantRoute: typeof WorkGrabMerchantRoute
   WorkGuruKreatorRoute: typeof WorkGuruKreatorRoute
@@ -233,11 +246,19 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof WorkCodingForKidsRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/work/beauty-portrait': {
+      id: '/work/beauty-portrait'
+      path: '/work/beauty-portrait'
+      fullPath: '/work/beauty-portrait'
+      preLoaderRoute: typeof WorkBeautyPortraitRouteImport
+      parentRoute: typeof rootRouteImport
+    }
   }
 }
 
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
+  WorkBeautyPortraitRoute: WorkBeautyPortraitRoute,
   WorkCodingForKidsRoute: WorkCodingForKidsRoute,
   WorkGrabMerchantRoute: WorkGrabMerchantRoute,
   WorkGuruKreatorRoute: WorkGuruKreatorRoute,
